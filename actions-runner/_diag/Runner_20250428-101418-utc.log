@@ -216,3 +216,48 @@
 [2025-04-28 11:24:03Z INFO JobNotification] Entering JobCompleted Notification
 [2025-04-28 11:24:03Z INFO JobNotification] Entering EndMonitor
 [2025-04-28 11:24:03Z INFO MessageListener] Received job status event. JobState: Online
+[2025-04-28 11:33:47Z INFO MessageListener] Message '1705678156852197617' received from session '4fec3a46-4865-42cc-aeed-0c281b743603'.
+[2025-04-28 11:33:47Z INFO ConfigurationStore] HasCredentials()
+[2025-04-28 11:33:47Z INFO ConfigurationStore] stored True
+[2025-04-28 11:33:47Z INFO CredentialManager] GetCredentialProvider
+[2025-04-28 11:33:47Z INFO CredentialManager] Creating type OAuth
+[2025-04-28 11:33:47Z INFO CredentialManager] Creating credential type: OAuth
+[2025-04-28 11:33:47Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:33:48Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:33:48Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:33:48Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-04-28 11:33:49Z INFO JobDispatcher] Job request 0 for plan 20186d24-b7b7-434d-a13d-77455447128a job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b received.
+[2025-04-28 11:33:49Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-04-28 11:33:49Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-04-28 11:33:49Z INFO JobDispatcher] Job request 3c373d5f-55f0-5670-a210-7e4e942d02ce processed succeed.
+[2025-04-28 11:33:49Z INFO Terminal] WRITE LINE: 2025-04-28 11:33:49Z: Running job: liquibase
+[2025-04-28 11:33:49Z INFO JobDispatcher] Start renew job request 0 for job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b.
+[2025-04-28 11:33:50Z INFO JobDispatcher] Successfully renew job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b, job is valid till 4/28/2025 11:43:50 AM
+[2025-04-28 11:33:50Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   File name: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin/Runner.Worker'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 146 153'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-04-28 11:33:50Z INFO ProcessInvokerWrapper] Process started with process id 13078, waiting for process exit.
+[2025-04-28 11:33:50Z INFO JobDispatcher] Send job request message to worker for job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b.
+[2025-04-28 11:33:50Z INFO ProcessChannel] Sending message of length 19561, with hash 'bcfdb1fb6c35cfabf2fef41f90dd5ecf7b955b0ca623694f4f9adb642d52cb05'
+[2025-04-28 11:33:50Z INFO JobNotification] Entering JobStarted Notification
+[2025-04-28 11:33:50Z INFO JobNotification] Entering StartMonitor
+[2025-04-28 11:34:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:34:42Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:34:42Z INFO ProcessInvokerWrapper] Finished process 13078 with exit code 100, and elapsed time 00:00:51.6532894.
+[2025-04-28 11:34:42Z INFO JobDispatcher] Worker finished for job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b. Code: 100
+[2025-04-28 11:34:42Z INFO JobDispatcher] finish job request for job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b with result: Succeeded
+[2025-04-28 11:34:42Z INFO Terminal] WRITE LINE: 2025-04-28 11:34:42Z: Job liquibase completed with result: Succeeded
+[2025-04-28 11:34:42Z INFO JobDispatcher] Stop renew job request for job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b.
+[2025-04-28 11:34:42Z INFO JobDispatcher] job renew has been cancelled, stop renew job cc599ecb-d91a-56b8-ad0c-2ab7ce268b6b.
+[2025-04-28 11:34:42Z INFO JobNotification] Entering JobCompleted Notification
+[2025-04-28 11:34:42Z INFO JobNotification] Entering EndMonitor
+[2025-04-28 11:34:42Z INFO MessageListener] Received job status event. JobState: Online
