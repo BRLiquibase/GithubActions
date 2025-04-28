@@ -1,27 +1,41 @@
-name: Local Liquibase Pipeline
+##########           LIQUIBASE FLOWFILE                ##########
+##########  learn more http://docs.liquibase.com/flow  ##########
 
-on:
-  push:
-    branches: [main]
+## Note: Any command which fails in any stage below result in the command stopping, and endStage being run.
+## A flow file can have one or more stages, each with multiple "actions", 
+## or your flow file can have multiple stages with fewer actions in each stage.
+stages:
 
-jobs:
-  liquibase-job:
-    runs-on: self-hosted
 
-    env:
-      VAULT_ADDR: http://localhost:8200
-      VAULT_TOKEN: vault-plaintext-root-token
-      LIQUIBASE_PRO_LICENSE: ${{ secrets.LIQUIBASE_PRO_LICENSE }}
+  ## The first stage of actions. 
+  Default:
+        
+    actions:
+      #
+      # Policy Checks for changelog
+      #
+      - type: liquibase
+        command: checks run
+        cmdArgs: {checks-scope: changelog}
+      #
+      # Run the update
+      #
+      - type: liquibase
+        command: update
+          
+      #
+      # Policy Checks for database
+      #
+      - type: liquibase
+        command: checks run
+        cmdArgs: {checks-scope: database}
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
 
-    - name: Run demo setup (Postgres + Vault)
-      run: |
-        chmod +x ./runme.sh
-        ./runme.sh
+## The endStage ALWAYS RUNS. 
+## So put actions here which you desire to perform whether previous stages' actions succeed or fail.
+## If you do not want any actions to ALWAYS RUN, simply delete the endStage from your flow file.
 
-    - name: Run Liquibase flow
-      run: |
-        liquibase flow --flow-file=liquibase.flowfile.yaml
+endStage:
+  actions:
+    - type: liquibase
+      command: history
