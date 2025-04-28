@@ -128,3 +128,208 @@
 [2025-04-28 10:47:20Z INFO MessageListener] The session conflict exception haven't reached retry limit.
 [2025-04-28 10:47:20Z ERR  Terminal] WRITE ERROR: 2025-04-28 10:47:20Z: Runner connect error: The actions runner Bens-MacBook-Air already has an active session.. Retrying until reconnected.
 [2025-04-28 10:47:20Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:47:50Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:47:50Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:47:50Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:47:50Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:47:50Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:47:50Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:47:50Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:47:50Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:47:50Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:47:50Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:47:50Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:47:50Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:47:50Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:47:50Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:47:50Z INFO MessageListener] VssConnection created
+[2025-04-28 10:47:50Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:47:50Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:47:50Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:47:50Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:47:50Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:47:50Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:47:50Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:47:50Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:47:50Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:48:20Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:48:20Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:48:20Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:48:20Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:48:20Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:48:21Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:48:21Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:48:21Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:48:21Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:48:21Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:48:21Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:48:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:48:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:48:21Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:48:21Z INFO MessageListener] VssConnection created
+[2025-04-28 10:48:21Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:48:21Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:48:21Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:48:21Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:48:21Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:48:21Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:48:21Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:48:21Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:48:21Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:48:51Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:48:51Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:48:51Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:48:51Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:48:51Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:48:51Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:48:51Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:48:51Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:48:51Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:48:51Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:48:51Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:48:52Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:48:52Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:48:52Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:48:52Z INFO MessageListener] VssConnection created
+[2025-04-28 10:48:52Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:48:52Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:48:52Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:48:52Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:48:52Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:48:52Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:48:52Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:48:52Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:48:52Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:49:22Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:49:22Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:49:22Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:49:22Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:49:22Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:49:22Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:49:22Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:49:22Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:49:22Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:49:22Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:49:22Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:49:22Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:49:22Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:49:22Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:49:23Z INFO MessageListener] VssConnection created
+[2025-04-28 10:49:23Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:49:23Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:49:23Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:49:23Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:49:23Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:49:23Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:49:23Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:49:23Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:49:23Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:49:53Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:49:53Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:49:53Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:49:53Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:49:53Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:49:53Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:49:53Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:49:53Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:49:53Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:49:53Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:49:53Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:49:53Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:49:53Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:49:53Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:49:53Z INFO MessageListener] VssConnection created
+[2025-04-28 10:49:53Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:49:53Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:49:53Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:49:54Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:49:54Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:49:54Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:49:54Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:49:54Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:49:54Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:50:24Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:50:24Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:50:24Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:50:24Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:50:24Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:50:24Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:50:24Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:50:24Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:50:24Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:50:24Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:50:24Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:50:24Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:50:24Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:50:24Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:50:24Z INFO MessageListener] VssConnection created
+[2025-04-28 10:50:24Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:50:24Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:50:24Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:50:24Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:50:24Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:50:24Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:50:24Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:50:24Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:50:24Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:50:54Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:50:54Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:50:54Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:50:54Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:50:54Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:50:54Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:50:54Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:50:54Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:50:54Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:50:54Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:50:54Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:50:55Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:50:55Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:50:55Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:50:55Z INFO MessageListener] VssConnection created
+[2025-04-28 10:50:55Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:50:55Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:50:55Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:50:55Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:50:55Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:50:55Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:50:55Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:50:55Z INFO MessageListener] The session conflict exception have reached retry limit.
+[2025-04-28 10:50:55Z ERR  Terminal] WRITE ERROR: Stop retry on SessionConflictException after retried for 240 seconds.
+[2025-04-28 10:50:55Z ERR  Terminal] WRITE ERROR: Failed to create session. The actions runner Bens-MacBook-Air already has an active session.
+[2025-04-28 10:50:55Z INFO Listener] Runner execution has finished with return code 5

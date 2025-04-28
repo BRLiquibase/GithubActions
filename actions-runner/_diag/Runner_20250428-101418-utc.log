@@ -122,3 +122,52 @@
 [2025-04-28 10:14:21Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
 [2025-04-28 10:14:21Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
 [2025-04-28 10:44:37Z INFO MessageListener] No message retrieved from session '4fec3a46-4865-42cc-aeed-0c281b743603' within last 30 minutes.
+[2025-04-28 11:04:46Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:04:46Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-04-28 11:09:34Z INFO MessageListener] Message '4092302200973984983' received from session '4fec3a46-4865-42cc-aeed-0c281b743603'.
+[2025-04-28 11:09:34Z INFO ConfigurationStore] HasCredentials()
+[2025-04-28 11:09:34Z INFO ConfigurationStore] stored True
+[2025-04-28 11:09:34Z INFO CredentialManager] GetCredentialProvider
+[2025-04-28 11:09:34Z INFO CredentialManager] Creating type OAuth
+[2025-04-28 11:09:34Z INFO CredentialManager] Creating credential type: OAuth
+[2025-04-28 11:09:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:09:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:09:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:09:35Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-04-28 11:09:36Z INFO JobDispatcher] Job request 0 for plan f63e389a-8509-4c30-a912-5a199602224a job 93eaedd3-8806-59fd-834a-14be75dfc1f0 received.
+[2025-04-28 11:09:36Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-04-28 11:09:36Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-04-28 11:09:36Z INFO Terminal] WRITE LINE: 2025-04-28 11:09:36Z: Running job: liquibase-demo
+[2025-04-28 11:09:36Z INFO JobDispatcher] Start renew job request 0 for job 93eaedd3-8806-59fd-834a-14be75dfc1f0.
+[2025-04-28 11:09:36Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:09:36Z INFO JobDispatcher] Successfully renew job 93eaedd3-8806-59fd-834a-14be75dfc1f0, job is valid till 4/28/2025 11:19:36 AM
+[2025-04-28 11:09:36Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   File name: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin/Runner.Worker'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 151 154'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:09:36Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-04-28 11:09:37Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-04-28 11:09:37Z INFO ProcessInvokerWrapper] Process started with process id 8794, waiting for process exit.
+[2025-04-28 11:09:37Z INFO JobDispatcher] Send job request message to worker for job 93eaedd3-8806-59fd-834a-14be75dfc1f0.
+[2025-04-28 11:09:37Z INFO ProcessChannel] Sending message of length 19300, with hash '1a2dbfb505717829a0a9142d5c25190b5f5f1ae8202b4f16be6bb47d24a5b125'
+[2025-04-28 11:09:37Z INFO JobNotification] Entering JobStarted Notification
+[2025-04-28 11:09:37Z INFO JobNotification] Entering StartMonitor
+[2025-04-28 11:10:37Z INFO JobDispatcher] Successfully renew job 93eaedd3-8806-59fd-834a-14be75dfc1f0, job is valid till 4/28/2025 11:20:37 AM
+[2025-04-28 11:10:38Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:10:38Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:10:38Z INFO ProcessInvokerWrapper] Finished process 8794 with exit code 102, and elapsed time 00:01:01.5863276.
+[2025-04-28 11:10:38Z INFO JobDispatcher] Worker finished for job 93eaedd3-8806-59fd-834a-14be75dfc1f0. Code: 102
+[2025-04-28 11:10:38Z INFO JobDispatcher] finish job request for job 93eaedd3-8806-59fd-834a-14be75dfc1f0 with result: Failed
+[2025-04-28 11:10:38Z INFO Terminal] WRITE LINE: 2025-04-28 11:10:38Z: Job liquibase-demo completed with result: Failed
+[2025-04-28 11:10:38Z INFO JobDispatcher] Stop renew job request for job 93eaedd3-8806-59fd-834a-14be75dfc1f0.
+[2025-04-28 11:10:38Z INFO JobDispatcher] job renew has been cancelled, stop renew job 93eaedd3-8806-59fd-834a-14be75dfc1f0.
+[2025-04-28 11:10:38Z INFO JobNotification] Entering JobCompleted Notification
+[2025-04-28 11:10:38Z INFO JobNotification] Entering EndMonitor
+[2025-04-28 11:10:38Z INFO MessageListener] Received job status event. JobState: Online

@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "BRLiquibase/GithubActions",
+  "pipelineDirectory": "GithubActions",
+  "workspaceDirectory": "GithubActions/GithubActions",
+  "repositories": {
+    "BRLiquibase/GithubActions": {
+      "repositoryPath": "GithubActions/GithubActions",
+      "lastRunOn": "04/28/2025 12:09:39 +01:00"
+    }
+  },
+  "lastRunOn": "04/28/2025 12:09:39 +01:00"
+}
