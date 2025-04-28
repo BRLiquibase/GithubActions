@@ -1,21 +1,27 @@
-name: Liquibase CI/CD
+name: Local Liquibase Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  liquibase:
-    runs-on: self-hosted  # or ubuntu-latest
+  liquibase-job:
+    runs-on: self-hosted
+
     env:
+      VAULT_ADDR: http://localhost:8200
+      VAULT_TOKEN: vault-plaintext-root-token
       LIQUIBASE_PRO_LICENSE: ${{ secrets.LIQUIBASE_PRO_LICENSE }}
 
     steps:
-    - name: Checkout
+    - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Setup Demo Environment
+    - name: Run demo setup (Postgres + Vault)
       run: |
         chmod +x ./runme.sh
         ./runme.sh
+
+    - name: Run Liquibase flow
+      run: |
+        liquibase flow --flow-file=liquibase.flowfile.yaml
