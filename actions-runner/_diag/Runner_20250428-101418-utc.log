@@ -171,3 +171,48 @@
 [2025-04-28 11:10:38Z INFO JobNotification] Entering JobCompleted Notification
 [2025-04-28 11:10:38Z INFO JobNotification] Entering EndMonitor
 [2025-04-28 11:10:38Z INFO MessageListener] Received job status event. JobState: Online
+[2025-04-28 11:23:34Z INFO MessageListener] Message '1895183394729136412' received from session '4fec3a46-4865-42cc-aeed-0c281b743603'.
+[2025-04-28 11:23:34Z INFO ConfigurationStore] HasCredentials()
+[2025-04-28 11:23:34Z INFO ConfigurationStore] stored True
+[2025-04-28 11:23:34Z INFO CredentialManager] GetCredentialProvider
+[2025-04-28 11:23:34Z INFO CredentialManager] Creating type OAuth
+[2025-04-28 11:23:34Z INFO CredentialManager] Creating credential type: OAuth
+[2025-04-28 11:23:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:23:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:23:34Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 11:23:35Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-04-28 11:23:36Z INFO JobDispatcher] Job request 0 for plan b5ec3ba9-1434-4f84-81ec-7a12b51d18ae job 3c373d5f-55f0-5670-a210-7e4e942d02ce received.
+[2025-04-28 11:23:36Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-04-28 11:23:36Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-04-28 11:23:36Z INFO JobDispatcher] Job request 93eaedd3-8806-59fd-834a-14be75dfc1f0 processed succeed.
+[2025-04-28 11:23:36Z INFO Terminal] WRITE LINE: 2025-04-28 11:23:36Z: Running job: liquibase-demo
+[2025-04-28 11:23:36Z INFO JobDispatcher] Start renew job request 0 for job 3c373d5f-55f0-5670-a210-7e4e942d02ce.
+[2025-04-28 11:23:36Z INFO JobDispatcher] Successfully renew job 3c373d5f-55f0-5670-a210-7e4e942d02ce, job is valid till 4/28/2025 11:33:36 AM
+[2025-04-28 11:23:36Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   File name: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin/Runner.Worker'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 146 153'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-04-28 11:23:36Z INFO ProcessInvokerWrapper] Process started with process id 11375, waiting for process exit.
+[2025-04-28 11:23:36Z INFO JobDispatcher] Send job request message to worker for job 3c373d5f-55f0-5670-a210-7e4e942d02ce.
+[2025-04-28 11:23:36Z INFO ProcessChannel] Sending message of length 19313, with hash '62e8fe67a0cf88ab06e12cef09b725d67609a57156375a8989a9822af30cc403'
+[2025-04-28 11:23:36Z INFO JobNotification] Entering JobStarted Notification
+[2025-04-28 11:23:36Z INFO JobNotification] Entering StartMonitor
+[2025-04-28 11:24:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:24:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:24:03Z INFO ProcessInvokerWrapper] Finished process 11375 with exit code 102, and elapsed time 00:00:26.3264013.
+[2025-04-28 11:24:03Z INFO JobDispatcher] Worker finished for job 3c373d5f-55f0-5670-a210-7e4e942d02ce. Code: 102
+[2025-04-28 11:24:03Z INFO JobDispatcher] finish job request for job 3c373d5f-55f0-5670-a210-7e4e942d02ce with result: Failed
+[2025-04-28 11:24:03Z INFO Terminal] WRITE LINE: 2025-04-28 11:24:03Z: Job liquibase-demo completed with result: Failed
+[2025-04-28 11:24:03Z INFO JobDispatcher] Stop renew job request for job 3c373d5f-55f0-5670-a210-7e4e942d02ce.
+[2025-04-28 11:24:03Z INFO JobDispatcher] job renew has been cancelled, stop renew job 3c373d5f-55f0-5670-a210-7e4e942d02ce.
+[2025-04-28 11:24:03Z INFO JobNotification] Entering JobCompleted Notification
+[2025-04-28 11:24:03Z INFO JobNotification] Entering EndMonitor
+[2025-04-28 11:24:03Z INFO MessageListener] Received job status event. JobState: Online

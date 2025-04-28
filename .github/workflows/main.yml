@@ -1,22 +1,21 @@
-name: Local Liquibase CICD Demo
+name: Liquibase CI/CD
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
-  liquibase-demo:
-    runs-on: self-hosted  # your local runner
+  liquibase:
+    runs-on: self-hosted  # or ubuntu-latest
+    env:
+      LIQUIBASE_PRO_LICENSE: ${{ secrets.LIQUIBASE_PRO_LICENSE }}
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
 
-      - name: Set script permissions
-        run: chmod +x ./runme.sh
-
-      - name: Run environment setup
-        run: ./runme.sh
-
-      - name: Run Liquibase flow
-        run: liquibase flow --flow-file=liquibase.flowfile.yaml
+    - name: Setup Demo Environment
+      run: |
+        chmod +x ./runme.sh
+        ./runme.sh

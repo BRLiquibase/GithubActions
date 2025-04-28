@@ -2908,3 +2908,28 @@ Starting Liquibase at 12:23:13 using Java 23.0.2 (version 4.31.1 #6739 built at 
 [2025-04-28 12:23:14] INFO [liquibase.command] Command execution complete
 [2025-04-28 12:23:14] INFO [liquibase.ui] Logs saved to liquibase.log
 [2025-04-28 12:23:14] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
+[2025-04-28 12:33:14] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:33:14 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-04-28 12:33:14] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-04-28 12:33:14] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-04-28 12:33:14] INFO [liquibase.integration] Starting command execution.
+[2025-04-28 12:33:14] INFO [liquibase.database] Set default schema name to public
+[2025-04-28 12:33:15] INFO [liquibase.changelog] Creating database history table with name: public.databasechangelog
+[2025-04-28 12:33:15] INFO [liquibase.snapshot] Creating snapshot
+[2025-04-28 12:33:15] INFO [liquibase.changelog] Reading from public.databasechangelog
+[2025-04-28 12:33:15] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:33:15] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-04-28 12:33:15] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
