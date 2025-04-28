@@ -1,0 +1,183 @@
+[2025-04-28 10:06:45Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'Credentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'Runner': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner'
+[2025-04-28 10:06:45Z INFO Listener] Runner is built for OSX (X64) - osx-x64.
+[2025-04-28 10:06:45Z INFO Listener] RuntimeInformation: Darwin 24.2.0 Darwin Kernel Version 24.2.0: Fri Dec  6 19:00:33 PST 2024; root:xnu-11215.61.5~2/RELEASE_ARM64_T8122.
+[2025-04-28 10:06:45Z INFO Listener] Version: 2.323.0
+[2025-04-28 10:06:45Z INFO Listener] Commit: d8b82f44a9ec0258904d5869ae683c31d5aac299
+[2025-04-28 10:06:45Z INFO Listener] Culture: en-US
+[2025-04-28 10:06:45Z INFO Listener] UI Culture: en-US
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO Listener] Validating directory permissions for: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO CommandLineParser] Parse
+[2025-04-28 10:06:45Z INFO CommandLineParser] Parsing 1 args
+[2025-04-28 10:06:45Z INFO CommandLineParser] parsing argument
+[2025-04-28 10:06:45Z INFO CommandLineParser] HasArgs: False
+[2025-04-28 10:06:45Z INFO CommandLineParser] Adding Command: run
+[2025-04-28 10:06:45Z INFO Listener] Arguments parsed
+[2025-04-28 10:06:45Z INFO Runner] ExecuteCommand
+[2025-04-28 10:06:45Z INFO ConfigurationStore] currentAssemblyLocation: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin/Runner.Listener.dll
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] binPath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] RootFolder: /Users/benriley/Documents/GitHub/GithubActions/actions-runner
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'Runner': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] ConfigFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'MigratedRunner': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner_migrated'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] MigratedConfigFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner_migrated
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'Credentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] CredFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'MigratedCredentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_migrated'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] MigratedCredFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_migrated
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'Service': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.service'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] ServiceConfigFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.service
+[2025-04-28 10:06:45Z INFO CommandSettings] Flag 'help': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Flag 'version': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Flag 'commit': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Flag 'check': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Command 'configure': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Command 'remove': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Command 'warmup': 'False'
+[2025-04-28 10:06:45Z INFO ConfigurationManager] LoadSettings
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsConfigured()
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsConfigured: True
+[2025-04-28 10:06:45Z INFO ConfigurationManager] Is configured: True
+[2025-04-28 10:06:45Z INFO ConfigurationStore] Read setting file: 308 chars
+[2025-04-28 10:06:45Z INFO ConfigurationManager] Settings Loaded
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsServiceConfigured()
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsServiceConfigured: False
+[2025-04-28 10:06:45Z INFO CommandSettings] Command 'run': 'True'
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsConfigured()
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsConfigured: True
+[2025-04-28 10:06:45Z INFO ConfigurationManager] Is configured: True
+[2025-04-28 10:06:45Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2025-04-28 10:06:45Z INFO Runner] Set runner startup type - Manual
+[2025-04-28 10:06:45Z INFO CommandSettings] Flag 'once': 'False'
+[2025-04-28 10:06:45Z INFO CommandSettings] Flag 'once': 'False'
+[2025-04-28 10:06:45Z INFO Runner] RunAsync
+[2025-04-28 10:06:45Z INFO ConfigurationManager] LoadSettings
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsConfigured()
+[2025-04-28 10:06:45Z INFO ConfigurationStore] IsConfigured: True
+[2025-04-28 10:06:45Z INFO ConfigurationManager] Is configured: True
+[2025-04-28 10:06:45Z INFO ConfigurationManager] Settings Loaded
+[2025-04-28 10:06:45Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "Bens-MacBook-Air",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/",
+  "GitHubUrl": "https://github.com/BRLiquibase/GithubActions",
+  "WorkFolder": "_work"
+}
+[2025-04-28 10:06:45Z INFO MessageListener] Loading Credentials
+[2025-04-28 10:06:45Z INFO ConfigurationStore] HasCredentials()
+[2025-04-28 10:06:45Z INFO ConfigurationStore] stored True
+[2025-04-28 10:06:45Z INFO CredentialManager] GetCredentialProvider
+[2025-04-28 10:06:45Z INFO CredentialManager] Creating type OAuth
+[2025-04-28 10:06:45Z INFO CredentialManager] Creating credential type: OAuth
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 10:06:45Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 10:06:45Z INFO HostContext] Well known config file 'RSACredentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams'
+[2025-04-28 10:06:45Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 10:06:45Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:06:45Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:06:45Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:06:45Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:06:45Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:06:45Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:06:45Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:06:45Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:06:45Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:06:45Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:06:45Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:06:46Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:06:46Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:06:46Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:06:46Z INFO MessageListener] VssConnection created
+[2025-04-28 10:06:46Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:06:46Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:06:46Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 10:06:46Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 10:06:47Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-04-28 10:06:47Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:06:47Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:06:47Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:06:47Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:06:47Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:06:47Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:06:47Z ERR  Terminal] WRITE ERROR: 2025-04-28 10:06:47Z: Runner connect error: The actions runner Bens-MacBook-Air already has an active session.. Retrying until reconnected.
+[2025-04-28 10:06:47Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:07:17Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:07:17Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:07:17Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:07:17Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:07:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:07:17Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:07:17Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:07:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:07:17Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:07:17Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:07:17Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:07:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:07:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:07:18Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:07:18Z INFO MessageListener] VssConnection created
+[2025-04-28 10:07:18Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:07:18Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:07:18Z ERR  GitHubActionsService] POST request to https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/_apis/distributedtask/pools/1/sessions failed. HTTP Status: Conflict
+[2025-04-28 10:07:18Z ERR  MessageListener] Catch exception during create session.
+[2025-04-28 10:07:18Z ERR  MessageListener] GitHub.DistributedTask.WebApi.TaskAgentSessionConflictException: The actions runner Bens-MacBook-Air already has an active session.
+   at GitHub.Services.WebApi.VssHttpClientBase.HandleResponseAsync(HttpResponseMessage response, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.CreateSessionAsync(CancellationToken token)
+[2025-04-28 10:07:18Z INFO MessageListener] The session for this runner already exists.
+[2025-04-28 10:07:18Z ERR  Terminal] WRITE ERROR: A session for this runner already exists.
+[2025-04-28 10:07:18Z INFO MessageListener] The session conflict exception haven't reached retry limit.
+[2025-04-28 10:07:18Z INFO MessageListener] Sleeping for 30 seconds before retrying.
+[2025-04-28 10:07:48Z INFO MessageListener] Attempt to create session.
+[2025-04-28 10:07:48Z INFO MessageListener] Connecting to the Runner Server...
+[2025-04-28 10:07:48Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:07:48Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-04-28 10:07:48Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:07:48Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:07:48Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:07:48Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:07:48Z INFO RunnerServer] EstablishVssConnection
+[2025-04-28 10:07:48Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-04-28 10:07:48Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-04-28 10:07:49Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:07:49Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:07:49Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-04-28 10:07:49Z INFO MessageListener] VssConnection created
+[2025-04-28 10:07:49Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:07:49Z INFO Terminal] WRITE LINE: 
+[2025-04-28 10:07:49Z INFO MessageListener] Session created.
+[2025-04-28 10:07:49Z INFO Terminal] WRITE LINE: 2025-04-28 10:07:49Z: Runner reconnected.
+[2025-04-28 10:07:49Z INFO Terminal] WRITE LINE: Current runner version: '2.323.0'
+[2025-04-28 10:07:49Z INFO Terminal] WRITE LINE: 2025-04-28 10:07:49Z: Listening for Jobs
+[2025-04-28 10:07:49Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2025-04-28 10:07:49Z INFO RSAFileKeyManager] Loading RSA key parameters from file /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_rsaparams
+[2025-04-28 10:07:49Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown

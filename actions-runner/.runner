@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "Bens-MacBook-Air",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/",
+  "gitHubUrl": "https://github.com/BRLiquibase/GithubActions",
+  "workFolder": "_work"
+}
