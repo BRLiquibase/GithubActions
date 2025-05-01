@@ -8,7 +8,7 @@
 
     <!-- Changeset 1: Create a simple 'users' table -->
     <changeSet id="1" author="benriley">
-        <createTable tableName="users2">
+        <createTable tableName="users">
             <column name="user_id" type="SERIAL">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -39,6 +39,11 @@
             constraintName="fk_projects_user"
             referencedTableName="users"
             referencedColumnNames="user_id"/>
+    </changeSet>
+
+    <!-- Changeset 3: Drop the 'projects' table -->
+    <changeSet id="3" author="benriley">
+        <dropTable tableName="projects"/>
     </changeSet>
 
 </databaseChangeLog>
