@@ -8,7 +8,7 @@
 
     <!-- Changeset 1: Create a simple 'users' table -->
     <changeSet id="1" author="benriley">
-        <createTable tableName="users">
+        <createTable tableName="users2">
             <column name="user_id" type="SERIAL">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
