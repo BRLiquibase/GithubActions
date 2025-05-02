@@ -2933,3 +2933,493 @@ Starting Liquibase at 12:33:14 using Java 23.0.2 (version 4.31.1 #6739 built at 
 [2025-04-28 12:33:15] INFO [liquibase.command] Command execution complete
 [2025-04-28 12:33:15] INFO [liquibase.ui] Logs saved to liquibase.log
 [2025-04-28 12:33:15] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
+[2025-04-28 12:41:46] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:41:46 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-04-28 12:41:46] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-04-28 12:41:46] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-04-28 12:41:46] INFO [liquibase.integration] Starting command execution.
+[2025-04-28 12:41:46] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:41:46] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:41:46] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:41:46] SEVERE [liquibase.command] Error during validation
+liquibase.exception.CommandValidationException: Error opening file 'liquibase.flowfile.yaml': Cannot create property=name for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@b8e246c
+ in 'string', line 1, column 1:
+    name: Local Liquibase Pipeline
+    ^
+Unable to find property 'name' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 1, column 7:
+    name: Local Liquibase Pipeline
+          ^
+
+	at com.datical.liquibase.ext.command.FlowValidateCommandStep.run(FlowValidateCommandStep.java:247)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at com.datical.liquibase.ext.command.FlowCommandStep.validate(FlowCommandStep.java:91)
+	at liquibase.command.CommandScope.validate(CommandScope.java:219)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:246)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: java.io.IOException: Cannot create property=name for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@b8e246c
+ in 'string', line 1, column 1:
+    name: Local Liquibase Pipeline
+    ^
+Unable to find property 'name' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 1, column 7:
+    name: Local Liquibase Pipeline
+          ^
+
+	at com.datical.liquibase.ext.flow.file.FlowFileHelper.load(FlowFileHelper.java:81)
+	at com.datical.liquibase.ext.command.AbstractFlowCommand.loadFlowFileContents(AbstractFlowCommand.java:41)
+	at com.datical.liquibase.ext.command.FlowValidateCommandStep.lambda$run$1(FlowValidateCommandStep.java:209)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at com.datical.liquibase.ext.command.FlowValidateCommandStep.run(FlowValidateCommandStep.java:207)
+	... 31 more
+Caused by: Cannot create property=name for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@b8e246c
+ in 'string', line 1, column 1:
+    name: Local Liquibase Pipeline
+    ^
+Unable to find property 'name' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 1, column 7:
+    name: Local Liquibase Pipeline
+          ^
+
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:283)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct(Constructor.java:169)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:320)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:264)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:247)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:201)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:185)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:507)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:436)
+	at com.datical.liquibase.ext.flow.file.FlowFileHelper.getFlowFileDTO(FlowFileHelper.java:86)
+	at com.datical.liquibase.ext.flow.file.FlowFileHelper.load(FlowFileHelper.java:66)
+	... 38 more
+Caused by: org.yaml.snakeyaml.error.YAMLException: Unable to find property 'name' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+	at org.yaml.snakeyaml.introspector.PropertyUtils.getProperty(PropertyUtils.java:112)
+	at org.yaml.snakeyaml.introspector.PropertyUtils.getProperty(PropertyUtils.java:102)
+	at org.yaml.snakeyaml.TypeDescription.discoverProperty(TypeDescription.java:166)
+	at org.yaml.snakeyaml.TypeDescription.getProperty(TypeDescription.java:177)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:224)
+	... 48 more
+
+[2025-04-28 12:41:46] SEVERE [liquibase.integration] Error during validation: Error opening file 'liquibase.flowfile.yaml': Cannot create property=name for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@b8e246c
+ in 'string', line 1, column 1:
+    name: Local Liquibase Pipeline
+    ^
+Unable to find property 'name' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 1, column 7:
+    name: Local Liquibase Pipeline
+          ^
+liquibase.exception.CommandValidationException: Error during validation: Error opening file 'liquibase.flowfile.yaml': Cannot create property=name for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@b8e246c
+ in 'string', line 1, column 1:
+    name: Local Liquibase Pipeline
+    ^
+Unable to find property 'name' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 1, column 7:
+    name: Local Liquibase Pipeline
+          ^
+
+	at com.datical.liquibase.ext.command.FlowCommandStep.validate(FlowCommandStep.java:96)
+	at liquibase.command.CommandScope.validate(CommandScope.java:219)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:246)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+
+[2025-04-28 12:41:46] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-04-28 12:42:42] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:42:42 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-04-28 12:42:42] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-04-28 12:42:42] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-04-28 12:42:42] INFO [liquibase.integration] Starting command execution.
+[2025-04-28 12:42:42] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:42:42] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:42:42] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:42:43] SEVERE [liquibase.command] Error during validation
+liquibase.exception.CommandValidationException: Error opening file 'liquibase.flowfile.yaml': Cannot create property=info for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@2c6ee758
+ in 'string', line 1, column 1:
+    info:
+    ^
+Unable to find property 'info' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 2, column 3:
+      name: Liquibase Flow Example
+      ^
+
+	at com.datical.liquibase.ext.command.FlowValidateCommandStep.run(FlowValidateCommandStep.java:247)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at com.datical.liquibase.ext.command.FlowCommandStep.validate(FlowCommandStep.java:91)
+	at liquibase.command.CommandScope.validate(CommandScope.java:219)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:246)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: java.io.IOException: Cannot create property=info for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@2c6ee758
+ in 'string', line 1, column 1:
+    info:
+    ^
+Unable to find property 'info' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 2, column 3:
+      name: Liquibase Flow Example
+      ^
+
+	at com.datical.liquibase.ext.flow.file.FlowFileHelper.load(FlowFileHelper.java:81)
+	at com.datical.liquibase.ext.command.AbstractFlowCommand.loadFlowFileContents(AbstractFlowCommand.java:41)
+	at com.datical.liquibase.ext.command.FlowValidateCommandStep.lambda$run$1(FlowValidateCommandStep.java:209)
+	at liquibase.Scope.lambda$child$0(Scope.java:201)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:200)
+	at liquibase.Scope.child(Scope.java:179)
+	at com.datical.liquibase.ext.command.FlowValidateCommandStep.run(FlowValidateCommandStep.java:207)
+	... 31 more
+Caused by: Cannot create property=info for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@2c6ee758
+ in 'string', line 1, column 1:
+    info:
+    ^
+Unable to find property 'info' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 2, column 3:
+      name: Liquibase Flow Example
+      ^
+
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:283)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct(Constructor.java:169)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:320)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:264)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:247)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:201)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:185)
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:507)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:436)
+	at com.datical.liquibase.ext.flow.file.FlowFileHelper.getFlowFileDTO(FlowFileHelper.java:86)
+	at com.datical.liquibase.ext.flow.file.FlowFileHelper.load(FlowFileHelper.java:66)
+	... 38 more
+Caused by: org.yaml.snakeyaml.error.YAMLException: Unable to find property 'info' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+	at org.yaml.snakeyaml.introspector.PropertyUtils.getProperty(PropertyUtils.java:112)
+	at org.yaml.snakeyaml.introspector.PropertyUtils.getProperty(PropertyUtils.java:102)
+	at org.yaml.snakeyaml.TypeDescription.discoverProperty(TypeDescription.java:166)
+	at org.yaml.snakeyaml.TypeDescription.getProperty(TypeDescription.java:177)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:224)
+	... 48 more
+
+[2025-04-28 12:42:43] SEVERE [liquibase.integration] Error during validation: Error opening file 'liquibase.flowfile.yaml': Cannot create property=info for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@2c6ee758
+ in 'string', line 1, column 1:
+    info:
+    ^
+Unable to find property 'info' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 2, column 3:
+      name: Liquibase Flow Example
+      ^
+liquibase.exception.CommandValidationException: Error during validation: Error opening file 'liquibase.flowfile.yaml': Cannot create property=info for JavaBean=com.datical.liquibase.ext.flow.file.FlowFileDTO@2c6ee758
+ in 'string', line 1, column 1:
+    info:
+    ^
+Unable to find property 'info' on class: com.datical.liquibase.ext.flow.file.FlowFileDTO
+ in 'string', line 2, column 3:
+      name: Liquibase Flow Example
+      ^
+
+	at com.datical.liquibase.ext.command.FlowCommandStep.validate(FlowCommandStep.java:96)
+	at liquibase.command.CommandScope.validate(CommandScope.java:219)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:246)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+
+[2025-04-28 12:42:43] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-04-28 12:43:53] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 12:43:53 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-04-28 12:43:53] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-04-28 12:43:53] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-04-28 12:43:53] INFO [liquibase.integration] Starting command execution.
+[2025-04-28 12:43:53] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:43:53] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:43:53] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:43:53] INFO [liquibase.ui] Flow file liquibase.flowfile.yaml is valid.
+[2025-04-28 12:43:53] INFO [liquibase.ui] Flow file liquibase.flowfile.yaml is valid.
+[2025-04-28 12:43:53] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:43:53] INFO [liquibase.ui] ******************************************************************************
+* 
+* Executing Stage: Default
+* 
+******************************************************************************
+
+[2025-04-28 12:43:53] INFO [liquibase.ui] ******************************************************************************
+* 
+* Executing 'liquibase' checks run
+* 
+******************************************************************************
+
+[2025-04-28 12:43:53] INFO [liquibase] Executing command 'checks run'
+[2025-04-28 12:43:54] INFO [liquibase.ui] INFO: Checks executed against changes generated by PostgreSQL at jdbc:postgresql://localhost:5433/postgres.
+[2025-04-28 12:43:54] INFO [liquibase.ui] Executing Policy Checks against example-changelog.xml
+
+[2025-04-28 12:43:54] INFO [liquibase] Check settings configuration file 'liquibase.checks-settings.conf' not found.
+[2025-04-28 12:44:00] INFO [liquibase] No configuration file named 'liquibase.checks-settings.conf' found.
+[2025-04-28 12:44:00] INFO [liquibase] Creating new file: liquibase.checks-settings.conf
+[2025-04-28 12:44:00] INFO [liquibase] Check settings configuration file located at '/Users/benriley/Documents/GitHub/GithubActions/liquibase.checks-settings.conf'.
+[2025-04-28 12:44:00] INFO [liquibase.ui] liquibase.checks-settings.conf successfully created!
+[2025-04-28 12:44:00] INFO [liquibase] liquibase.checks-settings.conf successfully created!
+[2025-04-28 12:44:00] INFO [liquibase] Reloading new file 'liquibase.checks-settings.conf'
+[2025-04-28 12:44:00] INFO [liquibase] Check settings configuration file located at 'file:///Users/benriley/Documents/GitHub/GithubActions/liquibase.checks-settings.conf'.
+[2025-04-28 12:44:00] INFO [liquibase] Check settings configuration file contents read from 'file:///Users/benriley/Documents/GitHub/GithubActions/liquibase.checks-settings.conf'.
+[2025-04-28 12:44:00] INFO [liquibase] The contents of this settings file are not versioned
+[2025-04-28 12:44:00] INFO [liquibase.ui] Executing all changelog checks because a valid license key was found!
+
+[2025-04-28 12:44:00] INFO [liquibase.ui] WARNING: No database checks were run. Make sure the checks-scope property includes "database" to run database checks. In the CLI set --checks-scope="changelog,database" or set an environment variable LIQUIBASE_COMMAND_CHECKS_SCOPE=database. Learn more at https://docs.liquibase.com/policy-checks
+
+[2025-04-28 12:44:00] INFO [liquibase.database] Set default schema name to public
+[2025-04-28 12:44:00] INFO [liquibase.ui] INFO: Customize this output with the 'checks-output' property. See list of options with 'liquibase checks run --help' or https://docs.liquibase.com/policy-checks
+[2025-04-28 12:44:00] INFO [liquibase.ui] INFO: The return code of all SQL Parser failures can be customized by setting the --sql-parser-fail-severity/LIQUIBASE_COMMAND_CHECKS_RUN_SQL_PARSER_FAIL_SEVERITY property, including setting it to '0' to prevent job interruptions. Learn more at https://docs.liquibase.com/policy-checks
+[2025-04-28 12:44:00] INFO [liquibase.command] Generated JSON report
+[2025-04-28 12:44:00] INFO [liquibase] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Checks-run-report-28-Apr-2025-124400.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-04-28 12:44:00] INFO [liquibase.ui] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Checks-run-report-28-Apr-2025-124400.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-04-28 12:44:02] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:44:02] INFO [liquibase.ui] Liquibase command 'checks run' was executed successfully.
+[2025-04-28 12:44:02] INFO [liquibase.ui] 
+[2025-04-28 12:44:02] INFO [liquibase.ui] ******************************************************************************
+* 
+* Executing 'liquibase' update
+* 
+******************************************************************************
+
+[2025-04-28 12:44:02] INFO [liquibase] Executing command 'update'
+[2025-04-28 12:44:02] INFO [liquibase.database] Set default schema name to public
+[2025-04-28 12:44:02] INFO [liquibase.changelog] Creating database history table with name: public.databasechangelog
+[2025-04-28 12:44:02] INFO [liquibase.changelog] Reading from public.databasechangelog
+[2025-04-28 12:44:02] INFO [liquibase.snapshot] Creating snapshot
+[2025-04-28 12:44:02] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-04-28 12:44:02] INFO [liquibase.command] Using deploymentId: 5840633090
+[2025-04-28 12:44:02] INFO [liquibase.changelog] Reading from public.databasechangelog
+[2025-04-28 12:44:02] INFO [liquibase.ui] Running Changeset: example-changelog.xml::1::benriley
+[2025-04-28 12:44:02] INFO [liquibase.changelog] Table users created
+[2025-04-28 12:44:02] INFO [liquibase.changelog] ChangeSet example-changelog.xml::1::benriley ran successfully in 10ms
+[2025-04-28 12:44:02] INFO [liquibase.ui] Running Changeset: example-changelog.xml::2::benriley
+[2025-04-28 12:44:02] INFO [liquibase.changelog] Table projects created
+[2025-04-28 12:44:02] INFO [liquibase.changelog] Foreign key constraint added to projects (user_id)
+[2025-04-28 12:44:02] INFO [liquibase.changelog] ChangeSet example-changelog.xml::2::benriley ran successfully in 18ms
+[2025-04-28 12:44:02] INFO [liquibase.util] UPDATE SUMMARY
+[2025-04-28 12:44:02] INFO [liquibase.util] Run:                          2
+[2025-04-28 12:44:02] INFO [liquibase.util] Previously run:               0
+[2025-04-28 12:44:02] INFO [liquibase.util] Filtered out:                 0
+[2025-04-28 12:44:02] INFO [liquibase.util] Failed deployment:            0
+[2025-04-28 12:44:02] INFO [liquibase.util] -------------------------------
+[2025-04-28 12:44:02] INFO [liquibase.util] Total change sets:            2
+[2025-04-28 12:44:02] INFO [liquibase.util] Update summary generated
+[2025-04-28 12:44:02] INFO [liquibase.command] Update command completed successfully.
+[2025-04-28 12:44:02] INFO [liquibase.ui] Liquibase: Update has been successful. Rows affected: 2
+[2025-04-28 12:44:02] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-04-28 12:44:02] INFO [liquibase] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Update-report-28-Apr-2025-124402.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-04-28 12:44:02] INFO [liquibase.ui] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Update-report-28-Apr-2025-124402.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-04-28 12:44:02] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:44:02] INFO [liquibase.ui] Liquibase command 'update' was executed successfully.
+[2025-04-28 12:44:02] INFO [liquibase.ui] 
+[2025-04-28 12:44:02] INFO [liquibase.ui] ******************************************************************************
+* 
+* Executing 'liquibase' checks run
+* 
+******************************************************************************
+
+[2025-04-28 12:44:02] INFO [liquibase] Executing command 'checks run'
+[2025-04-28 12:44:02] INFO [liquibase.ui] Executing Policy Checks against database jdbc:postgresql://localhost:5433/postgres
+
+[2025-04-28 12:44:02] INFO [liquibase] Check settings configuration file located at 'file:///Users/benriley/Documents/GitHub/GithubActions/liquibase.checks-settings.conf'.
+[2025-04-28 12:44:02] INFO [liquibase] Check settings configuration file contents read from 'file:///Users/benriley/Documents/GitHub/GithubActions/liquibase.checks-settings.conf'.
+[2025-04-28 12:44:02] INFO [liquibase] The contents of this settings file are not versioned
+[2025-04-28 12:44:03] INFO [liquibase.ui] WARNING: Additional checks have been added to 'liquibase.checks-settings.conf' and are disabled. To auto-enable new checks on upgrades, set '--auto-enable-new-checks=true'. Learn more at https://docs.liquibase.com/policy-checks
+[2025-04-28 12:44:03] INFO [liquibase] Additional checks have been added to 'liquibase.checks-settings.conf' and are disabled. To auto-enable new checks on upgrades, set '--auto-enable-new-checks=true'. Learn more at https://docs.liquibase.com/policy-checks
+[2025-04-28 12:44:03] INFO [liquibase.ui] Executing all database checks because a valid license key was found!
+
+[2025-04-28 12:44:03] INFO [liquibase.database] Set default schema name to public
+[2025-04-28 12:44:03] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:44:03] INFO [liquibase.snapshot] Creating snapshot
+[2025-04-28 12:44:03] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:44:03] INFO [liquibase.ui] INFO: Customize this output with the 'checks-output' property. See list of options with 'liquibase checks run --help' or https://docs.liquibase.com/policy-checks
+[2025-04-28 12:44:03] INFO [liquibase.ui] INFO: The return code of all SQL Parser failures can be customized by setting the --sql-parser-fail-severity/LIQUIBASE_COMMAND_CHECKS_RUN_SQL_PARSER_FAIL_SEVERITY property, including setting it to '0' to prevent job interruptions. Learn more at https://docs.liquibase.com/policy-checks
+[2025-04-28 12:44:03] INFO [liquibase.command] Generated JSON report
+[2025-04-28 12:44:03] INFO [liquibase] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Checks-run-report-28-Apr-2025-124403.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-04-28 12:44:03] INFO [liquibase.ui] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Checks-run-report-28-Apr-2025-124403.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-04-28 12:44:03] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:44:03] INFO [liquibase.ui] Liquibase command 'checks run' was executed successfully.
+[2025-04-28 12:44:03] INFO [liquibase.ui] 
+[2025-04-28 12:44:03] INFO [liquibase.ui] ******************************************************************************
+* 
+* Executing Stage: endStage
+* 
+******************************************************************************
+
+[2025-04-28 12:44:03] INFO [liquibase.ui] ******************************************************************************
+* 
+* Executing 'liquibase' history
+* 
+******************************************************************************
+
+[2025-04-28 12:44:03] INFO [liquibase] Executing command 'history'
+[2025-04-28 12:44:03] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-04-28 12:44:03] INFO [liquibase.database] Set default schema name to public
+[2025-04-28 12:44:03] INFO [liquibase.changelog] Reading from public.databasechangelog
+[2025-04-28 12:44:03] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:44:03] INFO [liquibase.ui] Liquibase command 'history' was executed successfully.
+[2025-04-28 12:44:03] INFO [liquibase.ui] 
+[2025-04-28 12:44:03] INFO [liquibase.command] Flow command complete
+[2025-04-28 12:44:03] INFO [liquibase.command] Command execution complete
+[2025-04-28 12:44:03] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-04-28 12:44:03] INFO [liquibase.ui] Liquibase command 'flow' was executed successfully.

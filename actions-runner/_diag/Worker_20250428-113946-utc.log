@@ -1,0 +1,3546 @@
+[2025-04-28 11:39:46Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-04-28 11:39:46Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:46Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:46Z INFO HostContext] Well known config file 'Credentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'Runner': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner'
+[2025-04-28 11:39:47Z INFO Worker] Version: 2.323.0
+[2025-04-28 11:39:47Z INFO Worker] Commit: d8b82f44a9ec0258904d5869ae683c31d5aac299
+[2025-04-28 11:39:47Z INFO Worker] Culture: en-US
+[2025-04-28 11:39:47Z INFO Worker] UI Culture: en-US
+[2025-04-28 11:39:47Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-04-28 11:39:47Z INFO ProcessChannel] Receiving message of length 20288, with hash '864599604257cd23e43b0600b659fe17a4592cbd8a548e9d2bda20b948b04fa7'
+[2025-04-28 11:39:47Z INFO Worker] Message received.
+[2025-04-28 11:39:47Z INFO Worker] Job message:
+ {
+  "environmentVariables": [
+    {
+      "type": 2,
+      "file": 1,
+      "line": 12,
+      "col": 7,
+      "map": [
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 12,
+            "col": 7,
+            "lit": "VAULT_ADDR"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 12,
+            "col": 19,
+            "lit": "http://localhost:8200"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 13,
+            "col": 7,
+            "lit": "VAULT_TOKEN"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 13,
+            "col": 20,
+            "lit": "vault-plaintext-root-token"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 14,
+            "col": 7,
+            "lit": "LIQUIBASE_PRO_LICENSE"
+          },
+          "value": {
+            "type": 3,
+            "file": 1,
+            "line": 14,
+            "col": 30,
+            "expr": "secrets.LIQUIBASE_PRO_LICENSE"
+          }
+        }
+      ]
+    }
+  ],
+  "fileTable": [
+    ".github/workflows/main.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 17,
+        "col": 13,
+        "lit": "Checkout code"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "0432afc8-d45d-485d-962f-47c479f828b0",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 20,
+        "col": 13,
+        "lit": "Run demo setup (Postgres + Vault)"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 12,
+              "lit": "chmod +x ./runme.sh\n./runme.sh\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "82ba6bbc-5e0b-4f11-be80-febc059158b8",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 25,
+        "col": 13,
+        "lit": "Run Liquibase flow"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 12,
+              "lit": "liquibase flow --flow-file=liquibase.flowfile.yaml\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "e80e8057-ed77-454d-b84a-abb2de7f4b14",
+      "name": "__run_2"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "LIQUIBASE_PRO_LICENSE": {
+      "value": "***",
+      "isSecret": true
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "liquibase-job"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "9f7dd2ac-16b5-467e-be97-8b6620946985.liquibase-job.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "liquibase-job"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "9f7dd2ac-16b5-467e-be97-8b6620946985",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "9f7dd2ac-16b5-467e-be97-8b6620946985",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "4f4c483e-9faa-533e-b895-9ce5528bc5e3",
+  "jobDisplayName": "liquibase-job",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://acghubeus1.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/WYKmKRhCacfamtz6DATDmRceG70Rtch8YA5cI5eCE6teJydCKa/",
+          "GenerateIdTokenUrl": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-2-azure-eastus.actions.githubusercontent.com/27/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+        },
+        {
+          "k": "repository",
+          "v": "BRLiquibase/GithubActions"
+        },
+        {
+          "k": "repository_owner",
+          "v": "BRLiquibase"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "206868563"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/BRLiquibase/GithubActions.git"
+        },
+        {
+          "k": "run_id",
+          "v": "14706876765"
+        },
+        {
+          "k": "run_number",
+          "v": "5"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "206868563"
+        },
+        {
+          "k": "actor",
+          "v": "BRLiquibase"
+        },
+        {
+          "k": "workflow",
+          "v": "Local Liquibase Pipeline"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "5ef7b57267a5814a75187f40c9090e5a42052298"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "briley@liquibase.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "BRLiquibase"
+                              },
+                              {
+                                "k": "username",
+                                "v": "BRLiquibase"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "briley@liquibase.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "BRLiquibase"
+                              },
+                              {
+                                "k": "username",
+                                "v": "BRLiquibase"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+                        },
+                        {
+                          "k": "message",
+                          "v": "flow added"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2025-04-28T12:39:36+01:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "619cba24077602c5d8362d78594a69c710192389"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/BRLiquibase/GithubActions/commit/2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/BRLiquibase/GithubActions/compare/5ef7b57267a5...2e2e8cd28cbc"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "briley@liquibase.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "BRLiquibase"
+                          },
+                          {
+                            "k": "username",
+                            "v": "BRLiquibase"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "briley@liquibase.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "BRLiquibase"
+                          },
+                          {
+                            "k": "username",
+                            "v": "BRLiquibase"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+                    },
+                    {
+                      "k": "message",
+                      "v": "flow added"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2025-04-28T12:39:36+01:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "619cba24077602c5d8362d78594a69c710192389"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/BRLiquibase/GithubActions/commit/2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "briley@liquibase.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "BRLiquibase"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/BRLiquibase/GithubActions.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1745833526.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": "GithubActions"
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "BRLiquibase/GithubActions"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/BRLiquibase/GithubActions.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/BRLiquibase/GithubActions"
+                    },
+                    {
+                      "k": "id",
+                      "v": 974127226.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "GithubActions"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOOhAAeg"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/206868563?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "briley@liquibase.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/BRLiquibase/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/BRLiquibase/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/BRLiquibase/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/BRLiquibase/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/BRLiquibase"
+                          },
+                          {
+                            "k": "id",
+                            "v": 206868563.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "BRLiquibase"
+                          },
+                          {
+                            "k": "name",
+                            "v": "BRLiquibase"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDODFSQUw"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/BRLiquibase/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/BRLiquibase/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/BRLiquibase/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/BRLiquibase/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/BRLiquibase/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/BRLiquibase"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1745840380.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 142133.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:BRLiquibase/GithubActions.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/BRLiquibase/GithubActions"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-04-28T11:36:58Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/BRLiquibase/GithubActions"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/206868563?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/BRLiquibase/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/BRLiquibase/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/BRLiquibase/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/BRLiquibase/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/BRLiquibase"
+                    },
+                    {
+                      "k": "id",
+                      "v": 206868563.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "BRLiquibase"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDODFSQUw"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/BRLiquibase/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/BRLiquibase/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/BRLiquibase/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/BRLiquibase/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/BRLiquibase/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/BRLiquibase"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "BRLiquibase/GithubActions/.github/workflows/main.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "2e2e8cd28cbc7c1f6a2846bebe87fce153b2e651"
+        },
+        {
+          "k": "repository_id",
+          "v": "974127226"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "BRLiquibase"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDODFSQUw"
+}
+[2025-04-28 11:39:47Z INFO JobRunner] Job ID 4f4c483e-9faa-533e-b895-9ce5528bc5e3
+[2025-04-28 11:39:47Z INFO ConfigurationStore] currentAssemblyLocation: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin/Runner.Worker.dll
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] binPath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] RootFolder: /Users/benriley/Documents/GitHub/GithubActions/actions-runner
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'Runner': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] ConfigFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'MigratedRunner': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner_migrated'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] MigratedConfigFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.runner_migrated
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'Credentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] CredFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'MigratedCredentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_migrated'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] MigratedCredFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials_migrated
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'Service': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.service'
+[2025-04-28 11:39:47Z INFO ConfigurationStore] ServiceConfigFilePath: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/.service
+[2025-04-28 11:39:47Z INFO ConfigurationStore] Read setting file: 308 chars
+[2025-04-28 11:39:47Z INFO JobRunner] Initializing launch client
+[2025-04-28 11:39:47Z INFO JobServerQueue] Initializing results client
+[2025-04-28 11:39:47Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-04-28 11:39:47Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2025-04-28 11:39:47Z INFO JobServerQueue] Start process web console line queue.
+[2025-04-28 11:39:47Z INFO JobServerQueue] Start process file upload queue.
+[2025-04-28 11:39:47Z INFO JobServerQueue] Start results file upload queue.
+[2025-04-28 11:39:47Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-04-28 11:39:47Z INFO JobServerQueue] Start process timeline update queue.
+[2025-04-28 11:39:47Z INFO ExecutionContext] Initialize GitHub context
+[2025-04-28 11:39:47Z INFO ExecutionContext] Initialize Env context
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:47Z INFO JobRunner] Starting the job execution context.
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO JobRunner] Validating directory permissions for: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Tools': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_tool'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:39:47Z INFO JobRunner] Getting job extension.
+[2025-04-28 11:39:47Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'Credentials': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.credentials'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known config file 'SetupInfo': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/.setup_info'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO PipelineDirectoryManager] Loading tracking config if exists: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_PipelineMapping/BRLiquibase/GithubActions/PipelineFolder.json
+[2025-04-28 11:39:47Z INFO PipelineDirectoryManager] Updating job run properties.
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO JobExtension] Downloading actions
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:47Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:47Z INFO Worker] Listening for cancel message from the channel.
+[2025-04-28 11:39:47Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2025-04-28 11:39:47Z INFO ResultServer] Successfully started websocket client.
+[2025-04-28 11:39:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd53a10a1-3d7d-4da8-877a-9cffd7ab094e', success rate: 1/1.
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd53a10a1-3d7d-4da8-877a-9cffd7ab094e', success rate: 1/1.
+[2025-04-28 11:39:48Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/tarball/11bd71901bbe5b1630ceea73d27597364c9af683' into /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/_temp_12170446-22e4-46d3-aa21-2bc50522cbfb/55b66e3b-8862-42b2-9d20-4eb398d8c8fb.tar.gz.
+[2025-04-28 11:39:48Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2025-04-28 11:39:48Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/tarball/11bd71901bbe5b1630ceea73d27597364c9af683 X-GitHub-Request-Id: E180:17D864:121BE:3DB85:680F6904 Http Status: OK
+[2025-04-28 11:39:48Z INFO ActionManager] Which2: 'tar'
+[2025-04-28 11:39:48Z INFO ActionManager] Location: '/usr/bin/tar'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/tar'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Arguments: '-xzf "/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/_temp_12170446-22e4-46d3-aa21-2bc50522cbfb/55b66e3b-8862-42b2-9d20-4eb398d8c8fb.tar.gz"'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/_temp_12170446-22e4-46d3-aa21-2bc50522cbfb/_staging'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] Process started with process id 14737, waiting for process exit.
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] Finished process 14737 with exit code 0, and elapsed time 00:00:00.0929575.
+[2025-04-28 11:39:48Z INFO ActionManager] Finished getting action repository.
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-04-28 11:39:48Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO ActionManager] Load action that reference repository from '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/actions/checkout/v4'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-04-28 11:39:48Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-04-28 11:39:48Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-04-28 11:39:48Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-04-28 11:39:48Z INFO JobExtension] Adding .
+[2025-04-28 11:39:48Z INFO JobExtension] Adding .
+[2025-04-28 11:39:48Z INFO JobExtension] Adding .
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO JobExtension] Total accessible running process: 294.
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO JobExtension] Start checking service connectivity in background.
+[2025-04-28 11:39:48Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "d53a10a1-3d7d-4da8-877a-9cffd7ab094e",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2,
+  "startTime": "2025-04-28T11:39:47.456734Z",
+  "finishTime": "2025-04-28T11:39:48.880489Z"
+}.
+[2025-04-28 11:39:48Z INFO JobRunner] Total job steps: 3.
+[2025-04-28 11:39:48Z INFO JobRunner] Run all job steps.
+[2025-04-28 11:39:48Z INFO StepsRunner] Processing step: DisplayName='Checkout code'
+[2025-04-28 11:39:48Z INFO StepsRunner] Evaluating: success()
+[2025-04-28 11:39:48Z INFO StepsRunner] Result: true
+[2025-04-28 11:39:48Z INFO StepsRunner] Starting the step.
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO ActionManager] Load action that reference repository from '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/actions/checkout/v4'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-04-28 11:39:48Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-04-28 11:39:48Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-04-28 11:39:48Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-04-28 11:39:48Z INFO ExecutionContext] Reserve record order 5 to 8 for post job actions.
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:39:48Z INFO ExecutionContext] Write event payload to /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_github_workflow/event.json
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:39:48Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "BRLiquibase/GithubActions"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-04-28 11:39:48Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd53a10a1-3d7d-4da8-877a-9cffd7ab094e', success rate: 1/1.
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:39:48Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-04-28 11:39:48Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command error
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command group
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-04-28 11:39:48Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:48Z INFO HostContext] Well known directory 'Externals': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/externals'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   File name: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/externals/node20/bin/node'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Arguments: '"/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/actions/checkout/v4/dist/index.js"'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/GithubActions/GithubActions'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:39:48Z INFO ProcessInvokerWrapper] Process started with process id 14749, waiting for process exit.
+[2025-04-28 11:39:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:49Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2025-04-28 11:39:49Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-04-28 11:39:49Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-04-28 11:39:49Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_d53a10a1-3d7d-4da8-877a-9cffd7ab094e.1
+[2025-04-28 11:39:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:49Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:50Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-04-28 11:39:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:50Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:39:58Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:39:58Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:39:58Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:08Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:08Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:08Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:40:18Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:18Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:18Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:40:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:40:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:40:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper] Finished process 14749 with exit code 0, and elapsed time 00:00:31.6230630.
+[2025-04-28 11:40:20Z INFO CreateStepSummaryCommand] Step Summary file (/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_runner_file_commands/step_summary_0e697f99-5d2b-4dd6-8abb-6a0f896450a9) is empty; skipping attachment upload
+[2025-04-28 11:40:20Z INFO StepsRunner] Step result: 
+[2025-04-28 11:40:20Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "0432afc8-d45d-485d-962f-47c479f828b0",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [
+    "no submodule mapping found in .gitmodules for path 'actions-runner/_work/GithubActions/GithubActions'",
+    "Unable to clean or reset the repository. The repository will be recreated instead."
+  ],
+  "executionTimeInSeconds": 32,
+  "startTime": "2025-04-28T11:39:48.893104Z",
+  "finishTime": "2025-04-28T11:40:20.587898Z"
+}.
+[2025-04-28 11:40:20Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-04-28 11:40:20Z INFO StepsRunner] Current state: job state = ''
+[2025-04-28 11:40:20Z INFO StepsRunner] Processing step: DisplayName='Run demo setup (Postgres + Vault)'
+[2025-04-28 11:40:20Z INFO StepsRunner] Evaluating: success()
+[2025-04-28 11:40:20Z INFO StepsRunner] Result: true
+[2025-04-28 11:40:20Z INFO StepsRunner] Starting the step.
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:20Z INFO ExecutionContext] Write event payload to /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_github_workflow/event.json
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:20Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-04-28 11:40:20Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command error
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command group
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-04-28 11:40:20Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-04-28 11:40:20Z INFO ScriptHandler] Which2: 'bash'
+[2025-04-28 11:40:20Z INFO ScriptHandler] Location: '/bin/bash'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:20Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:20Z INFO ScriptHandler] Which2: 'bash'
+[2025-04-28 11:40:20Z INFO ScriptHandler] Location: '/bin/bash'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   File name: '/bin/bash'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Arguments: '-e /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/1ea75a71-bf05-4d52-b24e-57c1a4e15198.sh'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/GithubActions/GithubActions'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:20Z INFO ProcessInvokerWrapper] Process started with process id 14961, waiting for process exit.
+[2025-04-28 11:40:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0432afc8-d45d-485d-962f-47c479f828b0', success rate: 1/1.
+[2025-04-28 11:40:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:21Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-04-28 11:40:21Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_0432afc8-d45d-485d-962f-47c479f828b0.1
+[2025-04-28 11:40:21Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-04-28 11:40:21Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-04-28 11:40:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:28Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:28Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:28Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:37Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:37Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:37Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper] Finished process 14961 with exit code 0, and elapsed time 00:00:17.3683568.
+[2025-04-28 11:40:38Z INFO CreateStepSummaryCommand] Step Summary file (/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_runner_file_commands/step_summary_806068be-0d59-420d-80f6-235bccab29bd) is empty; skipping attachment upload
+[2025-04-28 11:40:38Z INFO StepsRunner] Step result: 
+[2025-04-28 11:40:38Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "82ba6bbc-5e0b-4f11-be80-febc059158b8",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 18,
+  "startTime": "2025-04-28T11:40:20.594008Z",
+  "finishTime": "2025-04-28T11:40:38.019457Z"
+}.
+[2025-04-28 11:40:38Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-04-28 11:40:38Z INFO StepsRunner] Current state: job state = ''
+[2025-04-28 11:40:38Z INFO StepsRunner] Processing step: DisplayName='Run Liquibase flow'
+[2025-04-28 11:40:38Z INFO StepsRunner] Evaluating: success()
+[2025-04-28 11:40:38Z INFO StepsRunner] Result: true
+[2025-04-28 11:40:38Z INFO StepsRunner] Starting the step.
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:38Z INFO ExecutionContext] Write event payload to /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_github_workflow/event.json
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:38Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-04-28 11:40:38Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command error
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command group
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-04-28 11:40:38Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-04-28 11:40:38Z INFO ScriptHandler] Which2: 'bash'
+[2025-04-28 11:40:38Z INFO ScriptHandler] Location: '/bin/bash'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:38Z INFO ScriptHandler] Which2: 'bash'
+[2025-04-28 11:40:38Z INFO ScriptHandler] Location: '/bin/bash'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   File name: '/bin/bash'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Arguments: '-e /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/5b43518e-7a51-4245-8c8a-0640e9490967.sh'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/GithubActions/GithubActions'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:38Z INFO ProcessInvokerWrapper] Process started with process id 15035, waiting for process exit.
+[2025-04-28 11:40:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record '82ba6bbc-5e0b-4f11-be80-febc059158b8', success rate: 1/1.
+[2025-04-28 11:40:38Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e80e8057-ed77-454d-b84a-abb2de7f4b14', success rate: 1/1.
+[2025-04-28 11:40:38Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-04-28 11:40:38Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-04-28 11:40:38Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_82ba6bbc-5e0b-4f11-be80-febc059158b8.1
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:38Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:39Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-04-28 11:40:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e80e8057-ed77-454d-b84a-abb2de7f4b14', success rate: 1/1.
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper] Finished process 15035 with exit code 1, and elapsed time 00:00:01.4755399.
+[2025-04-28 11:40:39Z INFO CreateStepSummaryCommand] Step Summary file (/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_runner_file_commands/step_summary_88c89aa2-7f2b-496d-9251-a572719339c4) is empty; skipping attachment upload
+[2025-04-28 11:40:39Z INFO StepsRunner] Step result: Failed
+[2025-04-28 11:40:39Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "sh",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "e80e8057-ed77-454d-b84a-abb2de7f4b14",
+  "stepContextName": "__run_2",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 2,
+  "startTime": "2025-04-28T11:40:38.022435Z",
+  "finishTime": "2025-04-28T11:40:39.530013Z"
+}.
+[2025-04-28 11:40:39Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-04-28 11:40:39Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-04-28 11:40:39Z INFO StepsRunner] Processing step: DisplayName='Post Checkout code'
+[2025-04-28 11:40:39Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-04-28 11:40:39Z INFO StepsRunner] Evaluating: always()
+[2025-04-28 11:40:39Z INFO StepsRunner] Result: true
+[2025-04-28 11:40:39Z INFO StepsRunner] Starting the step.
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:40:39Z INFO ActionManager] Load action that reference repository from '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/actions/checkout/v4'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Actions': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions'
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-04-28 11:40:39Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-04-28 11:40:39Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-04-28 11:40:39Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:39Z INFO ExecutionContext] Write event payload to /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_github_workflow/event.json
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Work': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Temp': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp'
+[2025-04-28 11:40:39Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "BRLiquibase/GithubActions"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2025-04-28 11:40:39Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-04-28 11:40:39Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command error
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command group
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-04-28 11:40:39Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:39Z INFO HostContext] Well known directory 'Externals': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/externals'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   File name: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/externals/node20/bin/node'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Arguments: '"/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_actions/actions/checkout/v4/dist/index.js"'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/GithubActions/GithubActions'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:39Z INFO ProcessInvokerWrapper] Process started with process id 15041, waiting for process exit.
+[2025-04-28 11:40:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'e80e8057-ed77-454d-b84a-abb2de7f4b14', success rate: 1/1.
+[2025-04-28 11:40:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2efd1799-ac81-42ff-aa54-4fa1f4fec8f7', success rate: 1/1.
+[2025-04-28 11:40:40Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2025-04-28 11:40:40Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-04-28 11:40:40Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_e80e8057-ed77-454d-b84a-abb2de7f4b14.1
+[2025-04-28 11:40:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2efd1799-ac81-42ff-aa54-4fa1f4fec8f7', success rate: 1/1.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15041 with exit code 0, and elapsed time 00:00:00.7792684.
+[2025-04-28 11:40:40Z INFO CreateStepSummaryCommand] Step Summary file (/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp/_runner_file_commands/step_summary_b4d3cab9-7ca0-43f5-b0eb-108b4e13963a) is empty; skipping attachment upload
+[2025-04-28 11:40:40Z INFO StepsRunner] Step result: 
+[2025-04-28 11:40:40Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "2efd1799-ac81-42ff-aa54-4fa1f4fec8f7",
+  "result": "succeeded",
+  "errorMessages": [
+    "The process '/opt/homebrew/bin/git' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-04-28T11:40:39.533303Z",
+  "finishTime": "2025-04-28T11:40:40.342441Z"
+}.
+[2025-04-28 11:40:40Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-04-28 11:40:40Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-04-28 11:40:40Z INFO JobRunner] Finalize job.
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:40:40Z INFO JobExtension] Initialize Env context
+[2025-04-28 11:40:40Z INFO JobExtension] Initialize steps context
+[2025-04-28 11:40:40Z INFO JobExtension] Total accessible running process: 291.
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 15018 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 15018 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 15018 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15080, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15080 with exit code 0, and elapsed time 00:00:00.0266382.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 15018
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 15013 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 15013 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 15013 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15081, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15081 with exit code 0, and elapsed time 00:00:00.0213302.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 15013
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 15011 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 15011 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 15011 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15082, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15082 with exit code 0, and elapsed time 00:00:00.0208717.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 15011
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 15010 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 15010 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 15010 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15083, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15083 with exit code 0, and elapsed time 00:00:00.0199086.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 15010
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 14997 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 14997 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 14997 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15084, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15084 with exit code 0, and elapsed time 00:00:00.0199665.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 14997
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 14994 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 14994 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 14994 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2efd1799-ac81-42ff-aa54-4fa1f4fec8f7', success rate: 1/1.
+[2025-04-28 11:40:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '36b6143d-1dc6-46de-bbba-285dfce4c2e5', success rate: 1/1.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15085, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15085 with exit code 0, and elapsed time 00:00:00.0190311.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 14994
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 14992 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 14992 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 14992 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15086, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15086 with exit code 0, and elapsed time 00:00:00.0215633.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 14992
+[2025-04-28 11:40:40Z INFO JobExtension] Inspecting process environment variables. PID: 14991 (mdworker_shared)
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Read env from output of `ps e -p 14991 -o command`
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:40Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Starting process:
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   File name: 'ps'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Arguments: 'e -p 14991 -o command'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Working directory: '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Process started with process id 15087, waiting for process exit.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-04-28 11:40:40Z INFO ProcessInvokerWrapper] Finished process 15087 with exit code 0, and elapsed time 00:00:00.0219025.
+[2025-04-28 11:40:40Z INFO LinuxProcessExtensions] Successfully dump environment variables for 14991
+[2025-04-28 11:40:40Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-04-28 11:40:40Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "36b6143d-1dc6-46de-bbba-285dfce4c2e5",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-04-28T11:40:40.349127Z",
+  "finishTime": "2025-04-28T11:40:40.54809Z"
+}.
+[2025-04-28 11:40:40Z INFO JobRunner] Job result after all job steps finish: Failed
+[2025-04-28 11:40:40Z INFO JobRunner] Completing the job execution context.
+[2025-04-28 11:40:40Z INFO JobRunner] Shutting down the job server queue.
+[2025-04-28 11:40:40Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2025-04-28 11:40:40Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-04-28 11:40:41Z INFO JobServerQueue] All queue process task stopped.
+[2025-04-28 11:40:41Z INFO JobServerQueue] Web console line queue drained.
+[2025-04-28 11:40:41Z INFO JobServerQueue] Uploading 2 files in one shot.
+[2025-04-28 11:40:41Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2025-04-28 11:40:41Z INFO JobServerQueue] File upload queue drained.
+[2025-04-28 11:40:41Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-04-28 11:40:41Z INFO JobServerQueue] Uploading 3 file(s) in one shot through results service.
+[2025-04-28 11:40:41Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-04-28 11:40:41Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_2efd1799-ac81-42ff-aa54-4fa1f4fec8f7.1
+[2025-04-28 11:40:42Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-04-28 11:40:42Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_36b6143d-1dc6-46de-bbba-285dfce4c2e5.1
+[2025-04-28 11:40:42Z INFO JobServerQueue] Got a job log file to send to results service.
+[2025-04-28 11:40:42Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/blocks/9f7dd2ac-16b5-467e-be97-8b6620946985_4f4c483e-9faa-533e-b895-9ce5528bc5e3.1
+[2025-04-28 11:40:42Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2025-04-28 11:40:42Z INFO JobServerQueue] Results upload queue drained.
+[2025-04-28 11:40:42Z INFO JobServerQueue] Timeline update queue drained.
+[2025-04-28 11:40:42Z INFO JobServerQueue] Disposing job server ...
+[2025-04-28 11:40:42Z INFO JobServerQueue] Disposing results server ...
+[2025-04-28 11:40:42Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2025-04-28 11:40:42Z INFO TempDirectoryManager] Cleaning runner temp folder: /Users/benriley/Documents/GitHub/GithubActions/actions-runner/_work/_temp
+[2025-04-28 11:40:42Z INFO HostContext] Well known directory 'Bin': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/bin'
+[2025-04-28 11:40:42Z INFO HostContext] Well known directory 'Root': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner'
+[2025-04-28 11:40:42Z INFO HostContext] Well known directory 'Diag': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag'
+[2025-04-28 11:40:42Z INFO HostContext] Well known config file 'Telemetry': '/Users/benriley/Documents/GitHub/GithubActions/actions-runner/_diag/.telemetry'
+[2025-04-28 11:40:42Z INFO JobRunner] Raising job completed against run service
+[2025-04-28 11:40:43Z INFO Worker] Job completed.
