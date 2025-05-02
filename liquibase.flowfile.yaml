@@ -30,6 +30,9 @@ stages:
         command: checks run
         cmdArgs: {checks-scope: database}
 
+      - type: liquibase
+        command: diff  
+
 
 ## The endStage ALWAYS RUNS. 
 ## So put actions here which you desire to perform whether previous stages' actions succeed or fail.
