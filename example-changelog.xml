@@ -7,7 +7,7 @@
       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
     <!-- Changeset 1: Create a simple 'users' table -->
-    <changeSet id="1" author="benriley">
+    <changeSet id="1" author="benrileys">
         <createTable tableName="users">
             <column name="user_id" type="SERIAL">
                 <constraints primaryKey="true" nullable="false"/>
