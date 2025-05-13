@@ -1,0 +1,65 @@
+#!/bin/bash
+# liquibase.lib — Reusable Liquibase Pro wrapper for CI/CD & automation
+
+# --- Configuration ---
+liquibaseSetDefaults() {
+  export LIQUIBASE_COMMAND_USERNAME="${LIQUIBASE_USERNAME:-liquibase_user}"
+  export LIQUIBASE_COMMAND_PASSWORD="${LIQUIBASE_PASSWORD:-liquibase_pass}"
+  export LIQUIBASE_COMMAND_URL="${LIQUIBASE_JDBC_URL:-jdbc:postgresql://localhost:5432/postgres}"
+  export LIQUIBASE_COMMAND_CHECKS_SCOPE="database"
+  export LIQUIBASE_COMMAND_CHECKS_RUN_CHECKS_SCRIPTS_ENABLED="TRUE"
+  export LIQUIBASE_COMMAND_CHANGELOG_FILE="${LIQUIBASE_CHANGELOG_FILE:-master.xml}"
+}
+
+# --- Check Controls ---
+liquibaseRunCheck() {
+  local check_name="$1"
+  echo "🔎 Running Liquibase check: $check_name"
+  liquibase checks run --check-name="$check_name"
+}
+
+liquibaseEnableCheck() {
+  local check_name="$1"
+  echo "✅ Enabling check: $check_name"
+  liquibase checks enable --check-name="$check_name"
+}
+
+liquibaseDisableCheck() {
+  local check_name="$1"
+  echo "🚫 Disabling check: $check_name"
+  liquibase checks disable --check-name="$check_name"
+}
+
+# --- Updates ---
+liquibaseApplyChanges() {
+  echo "🚀 Applying Liquibase changes..."
+  liquibase update
+}
+
+liquibaseRollbackLast() {
+  echo "↩️ Rolling back last change..."
+  liquibase rollbackCount 1
+}
+
+# --- Policy Helpers ---
+liquibaseVerifyNoPII() {
+  local check_name="CheckPIIColumns"
+  liquibaseRunCheck "$check_name"
+  if [ $? -ne 0 ]; then
+    echo "❌ Policy check '$check_name' failed. Halting deployment."
+    exit 1
+  fi
+}
+
+liquibaseDryRunSQL() {
+  echo "📝 Generating SQL preview..."
+  liquibase updateSQL > liquibase-preview.sql
+  cat liquibase-preview.sql
+}
+
+# --- Debug Info ---
+liquibaseInfo() {
+  echo "🔧 Liquibase Settings:"
+  echo "  URL: $LIQUIBASE_COMMAND_URL"
+  echo "  Changelog: $LIQUIBASE_COMMAND_CHANGELOG_FILE"
+}
