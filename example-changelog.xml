@@ -45,5 +45,4 @@
         <changeSet id="3" author="benriley">
         <dropTable tableName="projects"/>
     </changeSet>  
-
 </databaseChangeLog>
