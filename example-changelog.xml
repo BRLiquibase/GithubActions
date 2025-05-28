@@ -42,7 +42,7 @@
     </changeSet>
 
     <!-- Changeset 3: Drop the 'projects' table -->
-      <changeSet id="3" author="benriley">
+      <!-- <changeSet id="3" author="benriley">
         <dropTable tableName="projects"/>
-    </changeSet>
+    </changeSet> -->
 </databaseChangeLog>
