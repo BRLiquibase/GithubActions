@@ -1,0 +1,1477 @@
+[2025-06-09 09:12:13] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:12:13 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:12:13] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:12:13] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:12:13] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:12:14] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:12:14] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:12:14] INFO [liquibase.ui] ERROR: Exception Primary Class:  ChangeLogParseException
+[2025-06-09 09:12:14] INFO [liquibase.ui] ERROR: Exception Primary Reason:  The file master.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/changes
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/rollback
+More locations can be added with the 'searchPath' parameter.
+[2025-06-09 09:12:14] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.31.1
+[2025-06-09 09:12:14] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:12:14] SEVERE [liquibase.integration] The file master.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/changes
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/rollback
+More locations can be added with the 'searchPath' parameter.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file master.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/changes
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/rollback
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.ChangeLogParseException: The file master.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/changes
+    - /Users/benriley/Documents/GitHub/GithubActions/Oracle/rollback
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:117)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+
+[2025-06-09 09:12:14] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:12:44] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:12:44 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:12:44] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:12:44] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:12:44] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:12:45] INFO [liquibase.changelog] Creating database history table with name: BENR.DATABASECHANGELOG
+[2025-06-09 09:12:46] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:12:46] INFO [liquibase.snapshot] Creating snapshot
+[2025-06-09 09:12:48] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:12:48] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:12:48] INFO [liquibase.ui] Liquibase command 'status' was executed successfully.
+[2025-06-09 09:13:15] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:13:15 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:13:15] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:13:15] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:13:15] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:13:16] INFO [liquibase.ui] INFO: Checks executed against changes generated by Oracle at jdbc:oracle:thin:@localhost:1521/FREEPDB1.
+[2025-06-09 09:13:16] INFO [liquibase.ui] Executing Policy Checks against master.xml
+
+[2025-06-09 09:13:16] INFO [liquibase.changelog] Reading from DATABASECHANGELOG
+[2025-06-09 09:13:16] INFO [liquibase] Check settings configuration file 'liquibase.checks-settings.conf' not found.
+[2025-06-09 09:13:19] INFO [liquibase] No configuration file named 'liquibase.checks-settings.conf' found.
+[2025-06-09 09:13:19] INFO [liquibase] Creating new file: liquibase.checks-settings.conf
+[2025-06-09 09:13:19] INFO [liquibase] Check settings configuration file located at '/Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:13:19] INFO [liquibase.ui] liquibase.checks-settings.conf successfully created!
+[2025-06-09 09:13:19] INFO [liquibase] liquibase.checks-settings.conf successfully created!
+[2025-06-09 09:13:19] INFO [liquibase] Reloading new file 'liquibase.checks-settings.conf'
+[2025-06-09 09:13:19] INFO [liquibase] Check settings configuration file located at 'file:///Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:13:19] INFO [liquibase] Check settings configuration file contents read from 'file:///Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:13:19] INFO [liquibase] The contents of this settings file are not versioned
+[2025-06-09 09:13:19] INFO [liquibase.ui] Executing all changelog checks because a valid license key was found!
+
+[2025-06-09 09:13:19] INFO [liquibase.ui] WARNING: No database checks were run. Make sure the checks-scope property includes "database" to run database checks. In the CLI set --checks-scope="changelog,database" or set an environment variable LIQUIBASE_COMMAND_CHECKS_SCOPE=database. Learn more at https://docs.liquibase.com/policy-checks
+
+[2025-06-09 09:13:19] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-06-09 09:13:19] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:13:19] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:13:19] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:13:19] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:13:19] INFO [liquibase.ui] ERROR: Exception Primary Class:  OracleDatabaseException
+[2025-06-09 09:13:19] INFO [liquibase.ui] ERROR: Exception Primary Reason:  ORA-00942: table or view "BENR"."ORDER_AUDIT_LOG" does not exist
+
+[2025-06-09 09:13:19] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:13:19] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:13:19] INFO [liquibase.ui] INFO: Customize this output with the 'checks-output' property. See list of options with 'liquibase checks run --help' or https://docs.liquibase.com/policy-checks
+[2025-06-09 09:13:19] INFO [liquibase.ui] INFO: The return code of all SQL Parser failures can be customized by setting the --sql-parser-fail-severity/LIQUIBASE_COMMAND_CHECKS_RUN_SQL_PARSER_FAIL_SEVERITY property, including setting it to '0' to prevent job interruptions. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:13:19] INFO [liquibase.command] Generated JSON report
+[2025-06-09 09:13:19] INFO [liquibase] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Checks-run-report-09-Jun-2025-091319.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:13:19] INFO [liquibase.ui] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Checks-run-report-09-Jun-2025-091319.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:13:22] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:13:22] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:13:22] INFO [liquibase.ui] Liquibase command 'checks run' was executed successfully.
+[2025-06-09 09:14:41] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:14:41 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:14:41] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:14:41] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:14:41] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:14:42] INFO [liquibase.ui] INFO: Checks executed against changes generated by Oracle at jdbc:oracle:thin:@localhost:1521/FREEPDB1.
+[2025-06-09 09:14:42] INFO [liquibase.ui] Executing Policy Checks against master.xml
+
+[2025-06-09 09:14:42] INFO [liquibase.changelog] Reading from DATABASECHANGELOG
+[2025-06-09 09:14:42] INFO [liquibase] Check settings configuration file located at 'file:///Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:14:42] INFO [liquibase] Check settings configuration file contents read from 'file:///Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:14:42] INFO [liquibase] The contents of this settings file are not versioned
+[2025-06-09 09:14:42] INFO [liquibase.ui] WARNING: Additional checks have been added to 'liquibase.checks-settings.conf' and are disabled. To auto-enable new checks on upgrades, set '--auto-enable-new-checks=true'. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:14:42] INFO [liquibase] Additional checks have been added to 'liquibase.checks-settings.conf' and are disabled. To auto-enable new checks on upgrades, set '--auto-enable-new-checks=true'. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:14:42] INFO [liquibase.ui] Executing all changelog checks because a valid license key was found!
+
+[2025-06-09 09:14:42] INFO [liquibase.ui] WARNING: No database checks were run. Make sure the checks-scope property includes "database" to run database checks. In the CLI set --checks-scope="changelog,database" or set an environment variable LIQUIBASE_COMMAND_CHECKS_SCOPE=database. Learn more at https://docs.liquibase.com/policy-checks
+
+[2025-06-09 09:14:42] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-06-09 09:14:42] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:14:42] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:14:42] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:14:42] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:14:42] INFO [liquibase.ui] ERROR: Exception Primary Class:  OracleDatabaseException
+[2025-06-09 09:14:42] INFO [liquibase.ui] ERROR: Exception Primary Reason:  ORA-00942: table or view "BENR"."ORDER_AUDIT_LOG" does not exist
+
+[2025-06-09 09:14:42] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:14:42] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:14:43] INFO [liquibase.ui] INFO: Customize this output with the 'checks-output' property. See list of options with 'liquibase checks run --help' or https://docs.liquibase.com/policy-checks
+[2025-06-09 09:14:43] INFO [liquibase.ui] INFO: The return code of all SQL Parser failures can be customized by setting the --sql-parser-fail-severity/LIQUIBASE_COMMAND_CHECKS_RUN_SQL_PARSER_FAIL_SEVERITY property, including setting it to '0' to prevent job interruptions. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:14:43] INFO [liquibase.command] Generated JSON report
+[2025-06-09 09:14:43] INFO [liquibase] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Checks-run-report-09-Jun-2025-091443.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:14:43] INFO [liquibase.ui] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Checks-run-report-09-Jun-2025-091443.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:14:45] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:14:46] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:14:46] INFO [liquibase.ui] Liquibase command 'checks run' was executed successfully.
+[2025-06-09 09:15:20] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:15:20 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:15:20] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:15:20] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:15:20] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:15:21] INFO [liquibase.ui] INFO: Checks executed against changes generated by Oracle at jdbc:oracle:thin:@localhost:1521/FREEPDB1.
+[2025-06-09 09:15:21] INFO [liquibase.ui] Executing Policy Checks against master.xml
+
+[2025-06-09 09:15:21] INFO [liquibase.changelog] Reading from DATABASECHANGELOG
+[2025-06-09 09:15:21] INFO [liquibase] Check settings configuration file located at 'file:///Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:15:21] INFO [liquibase] Check settings configuration file contents read from 'file:///Users/benriley/Documents/GitHub/GithubActions/Demo1/liquibase.checks-settings.conf'.
+[2025-06-09 09:15:21] INFO [liquibase] The contents of this settings file are not versioned
+[2025-06-09 09:15:21] INFO [liquibase.ui] WARNING: Additional checks have been added to 'liquibase.checks-settings.conf' and are disabled. To auto-enable new checks on upgrades, set '--auto-enable-new-checks=true'. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:15:21] INFO [liquibase] Additional checks have been added to 'liquibase.checks-settings.conf' and are disabled. To auto-enable new checks on upgrades, set '--auto-enable-new-checks=true'. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:15:21] INFO [liquibase.ui] Executing all changelog checks because a valid license key was found!
+
+[2025-06-09 09:15:21] INFO [liquibase.ui] WARNING: No database checks were run. Make sure the checks-scope property includes "database" to run database checks. In the CLI set --checks-scope="changelog,database" or set an environment variable LIQUIBASE_COMMAND_CHECKS_SCOPE=database. Learn more at https://docs.liquibase.com/policy-checks
+
+[2025-06-09 09:15:21] WARNING [liquibase.configuration] Potentially ignored key(s) in file exists at path liquibase.properties
+ - 'changeLogFile'
+[2025-06-09 09:15:21] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:15:21] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:15:21] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:15:21] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:15:21] INFO [liquibase.ui] ERROR: Exception Primary Class:  OracleDatabaseException
+[2025-06-09 09:15:21] INFO [liquibase.ui] ERROR: Exception Primary Reason:  ORA-00942: table or view "BENR"."ORDER_AUDIT_LOG" does not exist
+
+[2025-06-09 09:15:21] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:15:21] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:15:22] INFO [liquibase.ui] INFO: Customize this output with the 'checks-output' property. See list of options with 'liquibase checks run --help' or https://docs.liquibase.com/policy-checks
+[2025-06-09 09:15:22] INFO [liquibase.ui] INFO: The return code of all SQL Parser failures can be customized by setting the --sql-parser-fail-severity/LIQUIBASE_COMMAND_CHECKS_RUN_SQL_PARSER_FAIL_SEVERITY property, including setting it to '0' to prevent job interruptions. Learn more at https://docs.liquibase.com/policy-checks
+[2025-06-09 09:15:22] INFO [liquibase.command] Generated JSON report
+[2025-06-09 09:15:22] INFO [liquibase] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Checks-run-report-09-Jun-2025-091522.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:15:22] INFO [liquibase.ui] Pro Checks Run Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Checks-run-report-09-Jun-2025-091522.html' was created.
+** To suppress Checks Run reports add command arg 'liquibase checks run --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:15:24] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:15:24] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:15:24] INFO [liquibase.ui] ERROR: Exception Primary Class:  CommandFailedException
+[2025-06-09 09:15:24] INFO [liquibase.ui] ERROR: Exception Primary Reason:  Checks run command exited with error code of 4
+[2025-06-09 09:15:24] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.31.1
+[2025-06-09 09:15:24] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:15:24] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:16:13] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:16:13 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:16:13] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:16:13] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:16:13] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:16:13] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:16:34] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:16:34 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:16:34] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:16:34] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:16:34] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:16:35] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:16:35] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:16:35] INFO [liquibase.command] Using deploymentId: 9456994054
+[2025-06-09 09:16:35] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:16:35] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::001-create-order-audit-log::BenR
+[2025-06-09 09:16:36] INFO [liquibase.changelog] Table ORDER_AUDIT_LOG created
+[2025-06-09 09:16:36] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::001-create-order-audit-log::BenR ran successfully in 225ms
+[2025-06-09 09:16:36] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::002-insert-sample-record::DavidD
+[2025-06-09 09:16:36] INFO [liquibase.changelog] Custom SQL executed
+[2025-06-09 09:16:36] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::002-insert-sample-record::DavidD ran successfully in 33ms
+[2025-06-09 09:16:36] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::003-create-customer-orders::MikeO
+[2025-06-09 09:16:36] INFO [liquibase.changelog] Table CUSTOMER_ORDERS created
+[2025-06-09 09:16:36] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::003-create-customer-orders::MikeO ran successfully in 66ms
+[2025-06-09 09:16:36] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::004-modify-status-column::dev
+[2025-06-09 09:16:36] INFO [liquibase.changelog] CUSTOMER_ORDERS.status datatype was changed to VARCHAR2(50)
+[2025-06-09 09:16:36] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::004-modify-status-column::dev ran successfully in 289ms
+[2025-06-09 09:16:36] INFO [liquibase.ui] Running Changeset: changelog-procedure.xml::005-create-or-update-pkg::dev
+[2025-06-09 09:16:36] WARNING [liquibase.executor] Warning: execution completed with warning
+[2025-06-09 09:16:36] INFO [liquibase.changelog] SQL in file changes/update-pkg-order-process.sql executed
+[2025-06-09 09:16:36] INFO [liquibase.changelog] ChangeSet changelog-procedure.xml::005-create-or-update-pkg::dev ran successfully in 87ms
+[2025-06-09 09:16:36] INFO [liquibase.util] UPDATE SUMMARY
+[2025-06-09 09:16:36] INFO [liquibase.util] Run:                          5
+[2025-06-09 09:16:36] INFO [liquibase.util] Previously run:               0
+[2025-06-09 09:16:36] INFO [liquibase.util] Filtered out:                 0
+[2025-06-09 09:16:36] INFO [liquibase.util] Failed deployment:            0
+[2025-06-09 09:16:36] INFO [liquibase.util] -------------------------------
+[2025-06-09 09:16:36] INFO [liquibase.util] Total change sets:            5
+[2025-06-09 09:16:36] INFO [liquibase.util] Update summary generated
+[2025-06-09 09:16:36] INFO [liquibase.command] Update command completed successfully.
+[2025-06-09 09:16:36] INFO [liquibase.ui] Liquibase: Update has been successful. Rows affected: 6
+[2025-06-09 09:16:36] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:16:36] INFO [liquibase] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-091636.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:16:36] INFO [liquibase.ui] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-091636.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:16:38] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:16:38] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:16:38] INFO [liquibase.ui] Liquibase command 'update' was executed successfully.
+[2025-06-09 09:19:20] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:19:20 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:19:20] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:19:20] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:19:20] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:19:21] SEVERE [liquibase.parser] cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+[2025-06-09 09:19:21] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:19:21] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:19:21] INFO [liquibase.ui] ERROR: Exception Primary Class:  SAXParseException
+[2025-06-09 09:19:21] INFO [liquibase.ui] ERROR: Exception Primary Reason:  cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+[2025-06-09 09:19:21] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:19:21] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:19:21] SEVERE [liquibase.integration] Error parsing line 18 column 14 of changelog-demo1.xml: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 18 column 14 of changelog-demo1.xml: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 18 column 14 of changelog-demo1.xml: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.SetupException: Error parsing line 18 column 14 of changelog-demo1.xml: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:655)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:477)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:462)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:429)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 30 more
+Caused by: liquibase.exception.LiquibaseException: Error parsing line 18 column 14 of changelog-demo1.xml: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1110)
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:644)
+	... 34 more
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 18 column 14 of changelog-demo1.xml: cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:133)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1082)
+	... 35 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 18; columnNumber: 14; cvc-complex-type.2.4.a: Invalid content was found starting with element '{"http://www.liquibase.org/xml/ns/dbchangelog":tag}'. One of '{"http://www.liquibase.org/xml/ns/dbchangelog":comment, "http://www.liquibase.org/xml/ns/dbchangelog":createTable, "http://www.liquibase.org/xml/ns/dbchangelog":dropTable, "http://www.liquibase.org/xml/ns/dbchangelog":createView, "http://www.liquibase.org/xml/ns/dbchangelog":renameView, "http://www.liquibase.org/xml/ns/dbchangelog":dropView, "http://www.liquibase.org/xml/ns/dbchangelog":insert, "http://www.liquibase.org/xml/ns/dbchangelog":addColumn, "http://www.liquibase.org/xml/ns/dbchangelog":sql, "http://www.liquibase.org/xml/ns/dbchangelog":createProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":dropProcedure, "http://www.liquibase.org/xml/ns/dbchangelog":sqlFile, "http://www.liquibase.org/xml/ns/dbchangelog":renameTable, "http://www.liquibase.org/xml/ns/dbchangelog":renameColumn, "http://www.liquibase.org/xml/ns/dbchangelog":dropColumn, "http://www.liquibase.org/xml/ns/dbchangelog":mergeColumns, "http://www.liquibase.org/xml/ns/dbchangelog":modifyDataType, "http://www.liquibase.org/xml/ns/dbchangelog":createSequence, "http://www.liquibase.org/xml/ns/dbchangelog":alterSequence, "http://www.liquibase.org/xml/ns/dbchangelog":dropSequence, "http://www.liquibase.org/xml/ns/dbchangelog":renameSequence, "http://www.liquibase.org/xml/ns/dbchangelog":createIndex, "http://www.liquibase.org/xml/ns/dbchangelog":dropIndex, "http://www.liquibase.org/xml/ns/dbchangelog":addNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropNotNullConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":addForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropForeignKeyConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropAllForeignKeyConstraints, "http://www.liquibase.org/xml/ns/dbchangelog":addPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":dropPrimaryKey, "http://www.liquibase.org/xml/ns/dbchangelog":addLookupTable, "http://www.liquibase.org/xml/ns/dbchangelog":addAutoIncrement, "http://www.liquibase.org/xml/ns/dbchangelog":addDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":dropDefaultValue, "http://www.liquibase.org/xml/ns/dbchangelog":addUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":dropUniqueConstraint, "http://www.liquibase.org/xml/ns/dbchangelog":setTableRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":setColumnRemarks, "http://www.liquibase.org/xml/ns/dbchangelog":customChange, "http://www.liquibase.org/xml/ns/dbchangelog":update, "http://www.liquibase.org/xml/ns/dbchangelog":delete, "http://www.liquibase.org/xml/ns/dbchangelog":loadData, "http://www.liquibase.org/xml/ns/dbchangelog":loadUpdateData, "http://www.liquibase.org/xml/ns/dbchangelog":executeCommand, "http://www.liquibase.org/xml/ns/dbchangelog":stop, "http://www.liquibase.org/xml/ns/dbchangelog":output, "http://www.liquibase.org/xml/ns/dbchangelog":empty, "http://www.liquibase.org/xml/ns/dbchangelog":rollback, WC[##other:"http://www.liquibase.org/xml/ns/dbchangelog"], "http://www.liquibase.org/xml/ns/dbchangelog":modifySql}' is expected.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1972)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:375)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:124)
+	... 37 more
+
+[2025-06-09 09:19:21] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:22:37] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:22:37 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:22:37] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:22:37] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:22:37] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:22:38] SEVERE [liquibase.parser] cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+[2025-06-09 09:22:38] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:22:38] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:22:38] INFO [liquibase.ui] ERROR: Exception Primary Class:  SAXParseException
+[2025-06-09 09:22:38] INFO [liquibase.ui] ERROR: Exception Primary Reason:  cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+[2025-06-09 09:22:38] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:22:38] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:22:38] SEVERE [liquibase.integration] Error parsing line 9 column 91 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 9 column 91 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 9 column 91 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.SetupException: Error parsing line 9 column 91 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:655)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:477)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:462)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:429)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 30 more
+Caused by: liquibase.exception.LiquibaseException: Error parsing line 9 column 91 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1110)
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:644)
+	... 34 more
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 9 column 91 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:133)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1082)
+	... 35 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 9; columnNumber: 91; cvc-complex-type.3.2.2: Attribute 'tag' is not allowed to appear in element 'changeSet'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:375)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:124)
+	... 37 more
+
+[2025-06-09 09:22:38] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:23:48] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:23:48 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:23:48] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:23:48] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:23:48] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:23:49] SEVERE [liquibase.parser] cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+[2025-06-09 09:23:49] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:23:49] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:23:49] INFO [liquibase.ui] ERROR: Exception Primary Class:  SAXParseException
+[2025-06-09 09:23:49] INFO [liquibase.ui] ERROR: Exception Primary Reason:  cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+[2025-06-09 09:23:49] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:23:49] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:23:49] SEVERE [liquibase.integration] Error parsing line 9 column 93 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 9 column 93 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 9 column 93 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.SetupException: Error parsing line 9 column 93 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:655)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:477)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:462)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:429)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 30 more
+Caused by: liquibase.exception.LiquibaseException: Error parsing line 9 column 93 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1110)
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:644)
+	... 34 more
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 9 column 93 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:133)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1082)
+	... 35 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 9; columnNumber: 93; cvc-complex-type.3.2.2: Attribute 'label' is not allowed to appear in element 'changeSet'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:375)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:124)
+	... 37 more
+
+[2025-06-09 09:23:49] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:24:29] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:24:29 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:24:29] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:24:29] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:24:29] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:24:31] INFO [liquibase.changelog] Creating database history table with name: BENR.DATABASECHANGELOG
+[2025-06-09 09:24:31] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:24:31] INFO [liquibase.snapshot] Creating snapshot
+[2025-06-09 09:24:31] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:24:31] INFO [liquibase.command] Using deploymentId: 9457469021
+[2025-06-09 09:24:31] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:24:31] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::001-create-order-audit-log::BenR
+[2025-06-09 09:24:31] INFO [liquibase.changelog] Table ORDER_AUDIT_LOG created
+[2025-06-09 09:24:31] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::001-create-order-audit-log::BenR ran successfully in 24ms
+[2025-06-09 09:24:31] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::002-insert-sample-record::DavidD
+[2025-06-09 09:24:31] INFO [liquibase.changelog] Custom SQL executed
+[2025-06-09 09:24:31] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::002-insert-sample-record::DavidD ran successfully in 14ms
+[2025-06-09 09:24:31] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::003-create-customer-orders::MikeO
+[2025-06-09 09:24:31] INFO [liquibase.changelog] Table CUSTOMER_ORDERS created
+[2025-06-09 09:24:31] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::003-create-customer-orders::MikeO ran successfully in 20ms
+[2025-06-09 09:24:31] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::004-modify-status-column::dev
+[2025-06-09 09:24:31] INFO [liquibase.changelog] CUSTOMER_ORDERS.status datatype was changed to VARCHAR2(50)
+[2025-06-09 09:24:31] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::004-modify-status-column::dev ran successfully in 61ms
+[2025-06-09 09:24:31] INFO [liquibase.ui] Running Changeset: changelog-procedure.xml::005-create-or-update-pkg::dev
+[2025-06-09 09:24:31] WARNING [liquibase.executor] Warning: execution completed with warning
+[2025-06-09 09:24:31] INFO [liquibase.changelog] SQL in file changes/update-pkg-order-process.sql executed
+[2025-06-09 09:24:31] INFO [liquibase.changelog] ChangeSet changelog-procedure.xml::005-create-or-update-pkg::dev ran successfully in 32ms
+[2025-06-09 09:24:31] INFO [liquibase.util] UPDATE SUMMARY
+[2025-06-09 09:24:31] INFO [liquibase.util] Run:                          5
+[2025-06-09 09:24:31] INFO [liquibase.util] Previously run:               0
+[2025-06-09 09:24:31] INFO [liquibase.util] Filtered out:                 0
+[2025-06-09 09:24:31] INFO [liquibase.util] Failed deployment:            0
+[2025-06-09 09:24:31] INFO [liquibase.util] -------------------------------
+[2025-06-09 09:24:31] INFO [liquibase.util] Total change sets:            5
+[2025-06-09 09:24:31] INFO [liquibase.util] Update summary generated
+[2025-06-09 09:24:31] INFO [liquibase.command] Update command completed successfully.
+[2025-06-09 09:24:31] INFO [liquibase.ui] Liquibase: Update has been successful. Rows affected: 6
+[2025-06-09 09:24:31] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:24:32] INFO [liquibase] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-092431.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:24:32] INFO [liquibase.ui] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-092431.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:24:33] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:24:33] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:24:33] INFO [liquibase.ui] Liquibase command 'update' was executed successfully.
+[2025-06-09 09:28:01] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:28:01 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:28:01] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:28:01] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:28:01] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:28:01] SEVERE [liquibase.parser] cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+[2025-06-09 09:28:01] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:28:01] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:28:01] INFO [liquibase.ui] ERROR: Exception Primary Class:  SAXParseException
+[2025-06-09 09:28:01] INFO [liquibase.ui] ERROR: Exception Primary Reason:  cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+[2025-06-09 09:28:01] INFO [liquibase.ui] ERROR: Exception Primary Source:  Oracle Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.7.0.25.01
+[2025-06-09 09:28:01] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:28:02] SEVERE [liquibase.integration] Error parsing line 9 column 92 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 9 column 92 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: Error parsing line 9 column 92 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.SetupException: Error parsing line 9 column 92 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:655)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNodeHelper(DatabaseChangeLog.java:477)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:462)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:429)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 30 more
+Caused by: liquibase.exception.LiquibaseException: Error parsing line 9 column 92 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1110)
+	at liquibase.changelog.DatabaseChangeLog.handleInclude(DatabaseChangeLog.java:644)
+	... 34 more
+Caused by: liquibase.exception.ChangeLogParseException: Error parsing line 9 column 92 of changelog-demo1.xml: cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:133)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:1082)
+	... 35 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 9; columnNumber: 92; cvc-complex-type.3.2.2: Attribute 'tags' is not allowed to appear in element 'changeSet'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:830)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:375)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:124)
+	... 37 more
+
+[2025-06-09 09:28:02] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:31:32] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:31:32 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:31:32] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:31:32] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:31:32] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:31:33] INFO [liquibase.changelog] Creating database history table with name: BENR.DATABASECHANGELOG
+[2025-06-09 09:31:33] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:31:33] INFO [liquibase.snapshot] Creating snapshot
+[2025-06-09 09:31:34] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:31:34] INFO [liquibase.command] Using deploymentId: 9457891706
+[2025-06-09 09:31:34] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:31:34] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::001-create-order-audit-log::BenR
+[2025-06-09 09:31:34] INFO [liquibase.changelog] Table ORDER_AUDIT_LOG created
+[2025-06-09 09:31:34] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::001-create-order-audit-log::BenR ran successfully in 37ms
+[2025-06-09 09:31:34] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::002-insert-sample-record::DavidD
+[2025-06-09 09:31:34] INFO [liquibase.changelog] Custom SQL executed
+[2025-06-09 09:31:34] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::002-insert-sample-record::DavidD ran successfully in 33ms
+[2025-06-09 09:31:34] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::003-create-customer-orders::MikeO
+[2025-06-09 09:31:34] INFO [liquibase.changelog] Table CUSTOMER_ORDERS created
+[2025-06-09 09:31:34] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::003-create-customer-orders::MikeO ran successfully in 40ms
+[2025-06-09 09:31:34] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::004-modify-status-column::dev
+[2025-06-09 09:31:34] INFO [liquibase.changelog] CUSTOMER_ORDERS.status datatype was changed to VARCHAR2(50)
+[2025-06-09 09:31:34] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::004-modify-status-column::dev ran successfully in 130ms
+[2025-06-09 09:31:34] INFO [liquibase.ui] Running Changeset: changelog-procedure.xml::005-create-or-update-pkg::dev
+[2025-06-09 09:31:36] WARNING [liquibase.executor] Warning: execution completed with warning
+[2025-06-09 09:31:36] INFO [liquibase.changelog] SQL in file changes/update-pkg-order-process.sql executed
+[2025-06-09 09:31:36] INFO [liquibase.changelog] ChangeSet changelog-procedure.xml::005-create-or-update-pkg::dev ran successfully in 1429ms
+[2025-06-09 09:31:36] INFO [liquibase.util] UPDATE SUMMARY
+[2025-06-09 09:31:36] INFO [liquibase.util] Run:                          5
+[2025-06-09 09:31:36] INFO [liquibase.util] Previously run:               0
+[2025-06-09 09:31:36] INFO [liquibase.util] Filtered out:                 0
+[2025-06-09 09:31:36] INFO [liquibase.util] Failed deployment:            0
+[2025-06-09 09:31:36] INFO [liquibase.util] -------------------------------
+[2025-06-09 09:31:36] INFO [liquibase.util] Total change sets:            5
+[2025-06-09 09:31:36] INFO [liquibase.util] Update summary generated
+[2025-06-09 09:31:36] INFO [liquibase.command] Update command completed successfully.
+[2025-06-09 09:31:36] INFO [liquibase.ui] Liquibase: Update has been successful. Rows affected: 6
+[2025-06-09 09:31:36] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:31:36] INFO [liquibase] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-093136.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:31:36] INFO [liquibase.ui] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-093136.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:31:37] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:31:37] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:31:37] INFO [liquibase.ui] Liquibase command 'update' was executed successfully.
+[2025-06-09 09:36:39] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:36:39 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:36:39] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:36:39] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:36:39] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:36:40] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:36:40] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:36:40] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:36:40] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:36:40] INFO [liquibase.ui] ERROR: Exception Primary Class:  ChangeLogParseException
+[2025-06-09 09:36:40] INFO [liquibase.ui] ERROR: Exception Primary Reason:  The file your-changelog.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1/changes
+More locations can be added with the 'searchPath' parameter.
+[2025-06-09 09:36:40] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.31.1
+[2025-06-09 09:36:40] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:36:40] SEVERE [liquibase.integration] The file your-changelog.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1/changes
+More locations can be added with the 'searchPath' parameter.
+liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file your-changelog.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1/changes
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.ChangeLogParseException: The file your-changelog.xml was not found in the configured search path:
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1
+    - /Users/benriley/Documents/GitHub/GithubActions/Demo1/changes
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.parser.core.xml.XMLChangeLogSAXParser.parseToNode(XMLChangeLogSAXParser.java:117)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:15)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:125)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:124)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:83)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+
+[2025-06-09 09:36:40] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:37:09] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:37:09 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:37:09] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:37:09] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:37:09] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:37:09] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:37:10] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:37:10] INFO [liquibase.command] Rollback command encountered an exception.
+[2025-06-09 09:37:10] SEVERE [liquibase.command] 
+Error executing rollback for the targeted changeset 'your-changelog.xml::003-create-customer-orders::MikeO'.
+[2025-06-09 09:37:10] INFO [liquibase] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093710.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:37:10] INFO [liquibase.ui] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093710.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:37:13] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:37:14] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:37:14] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:37:14] INFO [liquibase.ui] ERROR: Exception Primary Class:  LiquibaseException
+[2025-06-09 09:37:14] INFO [liquibase.ui] ERROR: Exception Primary Reason:  
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'your-changelog.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+[2025-06-09 09:37:14] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.31.1
+[2025-06-09 09:37:14] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:37:14] SEVERE [liquibase.integration] Error executing rollback for the targeted changeset 'your-changelog.xml::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'your-changelog.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: 
+Error executing rollback for the targeted changeset 'your-changelog.xml::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'your-changelog.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.LiquibaseException: 
+Error executing rollback for the targeted changeset 'your-changelog.xml::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'your-changelog.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.handleRollbackError(RollbackOneChangesetCommandStep.java:261)
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.doRun(RollbackOneChangesetCommandStep.java:180)
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.run(RollbackOneChangesetCommandStep.java:92)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.LiquibaseException: 
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'your-changelog.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.doRun(RollbackOneChangesetCommandStep.java:153)
+	... 26 more
+
+[2025-06-09 09:37:14] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:37:50] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:37:50 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:37:50] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:37:50] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:37:50] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:37:50] SEVERE [liquibase.integration] Invalid argument '--changeset-path': missing required argument
+liquibase.exception.CommandValidationException: Invalid argument '--changeset-path': missing required argument
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:59)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+
+[2025-06-09 09:37:50] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:38:29] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:38:29 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:38:29] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:38:29] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:38:29] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:38:29] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:38:30] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:38:30] INFO [liquibase.command] Rollback command encountered an exception.
+[2025-06-09 09:38:30] SEVERE [liquibase.command] 
+Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO'.
+[2025-06-09 09:38:30] INFO [liquibase] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093830.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:38:30] INFO [liquibase.ui] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093830.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:38:32] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:38:32] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:38:32] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:38:32] INFO [liquibase.ui] ERROR: Exception Primary Class:  LiquibaseException
+[2025-06-09 09:38:32] INFO [liquibase.ui] ERROR: Exception Primary Reason:  
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+[2025-06-09 09:38:32] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.31.1
+[2025-06-09 09:38:32] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:38:33] SEVERE [liquibase.integration] Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: 
+Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.LiquibaseException: 
+Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.handleRollbackError(RollbackOneChangesetCommandStep.java:261)
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.doRun(RollbackOneChangesetCommandStep.java:180)
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.run(RollbackOneChangesetCommandStep.java:92)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.LiquibaseException: 
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.doRun(RollbackOneChangesetCommandStep.java:153)
+	... 26 more
+
+[2025-06-09 09:38:33] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:38:50] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:38:50 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:38:50] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:38:50] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:38:50] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:38:51] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:38:51] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:38:51] INFO [liquibase.command] Rollback command encountered an exception.
+[2025-06-09 09:38:51] SEVERE [liquibase.command] 
+Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO'.
+[2025-06-09 09:38:51] INFO [liquibase] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093851.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:38:51] INFO [liquibase.ui] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093851.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:38:53] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:38:53] INFO [liquibase.command] Logging exception.
+[2025-06-09 09:38:53] INFO [liquibase.ui] ERROR: Exception Details
+[2025-06-09 09:38:53] INFO [liquibase.ui] ERROR: Exception Primary Class:  LiquibaseException
+[2025-06-09 09:38:53] INFO [liquibase.ui] ERROR: Exception Primary Reason:  
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+[2025-06-09 09:38:53] INFO [liquibase.ui] ERROR: Exception Primary Source:  4.31.1
+[2025-06-09 09:38:53] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:38:53] SEVERE [liquibase.integration] Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: 
+Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:300)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.command.CommandScope.execute(CommandScope.java:241)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:51)
+	at liquibase.integration.commandline.CommandRunner.call(CommandRunner.java:21)
+	at picocli.CommandLine.executeUserObject(CommandLine.java:2045)
+	at picocli.CommandLine.access$1500(CommandLine.java:148)
+	at picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2465)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2457)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:2419)
+	at picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)
+	at picocli.CommandLine$RunLast.execute(CommandLine.java:2421)
+	at picocli.CommandLine.execute(CommandLine.java:2174)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$2(LiquibaseCommandLine.java:414)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.lambda$execute$3(LiquibaseCommandLine.java:389)
+	at liquibase.Scope.child(Scope.java:210)
+	at liquibase.Scope.child(Scope.java:186)
+	at liquibase.integration.commandline.LiquibaseCommandLine.execute(LiquibaseCommandLine.java:386)
+	at liquibase.integration.commandline.LiquibaseCommandLine.main(LiquibaseCommandLine.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at liquibase.integration.commandline.LiquibaseLauncher.main(LiquibaseLauncher.java:121)
+Caused by: liquibase.exception.LiquibaseException: 
+Error executing rollback for the targeted changeset '/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO':
+
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.handleRollbackError(RollbackOneChangesetCommandStep.java:261)
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.doRun(RollbackOneChangesetCommandStep.java:180)
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.run(RollbackOneChangesetCommandStep.java:92)
+	at liquibase.command.CommandScope.lambda$execute$6(CommandScope.java:253)
+	... 24 more
+Caused by: liquibase.exception.LiquibaseException: 
+
+WARNING:  The command 'rollback-one-changeset' failed because the targeted changeset
+'/Users/benriley/Documents/GitHub/GithubActions/Demo1/changelog-demo1.xml::003-create-customer-orders::MikeO' cannot be located.
+At least one supplied parameter cannot be found in combination with the other parameters.
+Please check your details and try again.
+
+NOTE:  A changeset with this ID was located.
+No rollback was performed.
+	at com.datical.liquibase.ext.command.RollbackOneChangesetCommandStep.doRun(RollbackOneChangesetCommandStep.java:153)
+	... 26 more
+
+[2025-06-09 09:38:53] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:39:28] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:39:28 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:39:28] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:39:28] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:39:28] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:39:29] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:39:29] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:39:29] INFO [liquibase.ui] Rolling Back Changeset: changelog-demo1.xml::003-create-customer-orders::MikeO
+[2025-06-09 09:39:30] INFO [liquibase.command] Rollback command completed successfully.
+[2025-06-09 09:39:30] INFO [liquibase.ui] rollback-one-changeset executed for BENR@jdbc:oracle:thin:@localhost:1521/FREEPDB1
+[2025-06-09 09:39:30] INFO [liquibase] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093930.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:39:30] INFO [liquibase.ui] Pro Rollback One Changeset Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Rollback-one-changeset-report-09-Jun-2025-093930.html' was created.
+** To suppress Rollback One Changeset reports add command arg 'liquibase rollback-one-changeset --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:39:34] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:39:34] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:39:35] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:39:35] INFO [liquibase.ui] Liquibase command 'rollback-one-changeset' was executed successfully.
+[2025-06-09 09:42:48] INFO [liquibase.ui] ####################################################
+##   _     _             _ _                      ##
+##  | |   (_)           (_) |                     ##
+##  | |    _  __ _ _   _ _| |__   __ _ ___  ___   ##
+##  | |   | |/ _` | | | | | '_ \ / _` / __|/ _ \  ##
+##  | |___| | (_| | |_| | | |_) | (_| \__ \  __/  ##
+##  \_____/_|\__, |\__,_|_|_.__/ \__,_|___/\___|  ##
+##              | |                               ##
+##              |_|                               ##
+##                                                ## 
+##  Get documentation at docs.liquibase.com       ##
+##  Get certified courses at learn.liquibase.com  ## 
+##                                                ##
+####################################################
+Starting Liquibase at 09:42:48 using Java 23.0.2 (version 4.31.1 #6739 built at 2025-02-13 13:46+0000)
+[2025-06-09 09:42:48] INFO [liquibase.ui] Liquibase Version: 4.31.1
+[2025-06-09 09:42:48] INFO [liquibase.ui] Liquibase Pro 4.31.1 by Liquibase licensed to Liquibase_SA until Thu Jan 01 04:59:59 GMT 2026
+[2025-06-09 09:42:48] INFO [liquibase.integration] Starting command execution.
+[2025-06-09 09:42:49] INFO [liquibase.changelog] Creating database history table with name: BENR.DATABASECHANGELOG
+[2025-06-09 09:42:49] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:42:49] INFO [liquibase.snapshot] Creating snapshot
+[2025-06-09 09:42:50] INFO [liquibase.lockservice] Successfully acquired change log lock
+[2025-06-09 09:42:50] INFO [liquibase.command] Using deploymentId: 9458568002
+[2025-06-09 09:42:50] INFO [liquibase.changelog] Reading from BENR.DATABASECHANGELOG
+[2025-06-09 09:42:50] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::001-create-order-audit-log::BenR
+[2025-06-09 09:42:50] INFO [liquibase.changelog] Table ORDER_AUDIT_LOG created
+[2025-06-09 09:42:50] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::001-create-order-audit-log::BenR ran successfully in 22ms
+[2025-06-09 09:42:50] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::002-insert-sample-record::DavidD
+[2025-06-09 09:42:50] INFO [liquibase.changelog] Custom SQL executed
+[2025-06-09 09:42:50] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::002-insert-sample-record::DavidD ran successfully in 33ms
+[2025-06-09 09:42:50] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::003-create-customer-orders::MikeO
+[2025-06-09 09:42:50] INFO [liquibase.changelog] Table CUSTOMER_ORDERS created
+[2025-06-09 09:42:50] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::003-create-customer-orders::MikeO ran successfully in 19ms
+[2025-06-09 09:42:50] INFO [liquibase.ui] Running Changeset: changelog-demo1.xml::004-modify-status-column::dev
+[2025-06-09 09:42:50] INFO [liquibase.changelog] CUSTOMER_ORDERS.status datatype was changed to VARCHAR2(50)
+[2025-06-09 09:42:50] INFO [liquibase.changelog] ChangeSet changelog-demo1.xml::004-modify-status-column::dev ran successfully in 94ms
+[2025-06-09 09:42:50] INFO [liquibase.ui] Running Changeset: changelog-procedure.xml::005-create-or-update-pkg::dev
+[2025-06-09 09:42:50] WARNING [liquibase.executor] Warning: execution completed with warning
+[2025-06-09 09:42:50] INFO [liquibase.changelog] SQL in file changes/update-pkg-order-process.sql executed
+[2025-06-09 09:42:50] INFO [liquibase.changelog] ChangeSet changelog-procedure.xml::005-create-or-update-pkg::dev ran successfully in 54ms
+[2025-06-09 09:42:50] INFO [liquibase.util] UPDATE SUMMARY
+[2025-06-09 09:42:50] INFO [liquibase.util] Run:                          5
+[2025-06-09 09:42:50] INFO [liquibase.util] Previously run:               0
+[2025-06-09 09:42:50] INFO [liquibase.util] Filtered out:                 0
+[2025-06-09 09:42:50] INFO [liquibase.util] Failed deployment:            0
+[2025-06-09 09:42:50] INFO [liquibase.util] -------------------------------
+[2025-06-09 09:42:50] INFO [liquibase.util] Total change sets:            5
+[2025-06-09 09:42:50] INFO [liquibase.util] Update summary generated
+[2025-06-09 09:42:50] INFO [liquibase.command] Update command completed successfully.
+[2025-06-09 09:42:50] INFO [liquibase.ui] Liquibase: Update has been successful. Rows affected: 6
+[2025-06-09 09:42:50] INFO [liquibase.lockservice] Successfully released change log lock
+[2025-06-09 09:42:50] INFO [liquibase] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-094250.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:42:50] INFO [liquibase.ui] Pro Update Report created!
+* File '/Users/benriley/Documents/GitHub/GithubActions/Demo1/Update-report-09-Jun-2025-094250.html' was created.
+** To suppress Update reports add command arg 'liquibase update --report-enabled=false'
+** To suppress all Pro Reports set liquibase.reports.enabled=false, or LIQUIBASE_REPORTS_ENABLED=false
+[2025-06-09 09:42:54] INFO [liquibase.command] Command execution complete
+[2025-06-09 09:42:54] INFO [liquibase.ui] Logs saved to liquibase.log
+[2025-06-09 09:42:54] INFO [liquibase.ui] Liquibase command 'update' was executed successfully.

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="005-update-order-proc-v2" author="dev">
+        <sqlFile path="changes/update-pkg-order-process-set2.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="rollback/revert-pkg-order-process-set1.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="006-drop-legacy-column" author="dev">
+        <dropColumn tableName="CUSTOMER_ORDERS" columnName="legacy_flag"/>
+        <rollback>
+            <addColumn tableName="CUSTOMER_ORDERS">
+                <column name="legacy_flag" type="VARCHAR2(10)"/>
+            </addColumn>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="001-create-order-audit-log" author="dev">
+        <createTable tableName="ORDER_AUDIT_LOG">
+            <column name="audit_id" type="NUMBER(10)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="order_id" type="NUMBER(10)"/>
+            <column name="action" type="VARCHAR2(50)"/>
+            <column name="created_at" type="TIMESTAMP"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="ORDER_AUDIT_LOG"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="002-insert-sample-audit" author="dev">
+        <sql>
+            INSERT INTO ORDER_AUDIT_LOG (audit_id, order_id, action, created_at)
+            VALUES (1, 1001, 'ORDER_CREATED', SYSTIMESTAMP);
+        </sql>
+        <rollback>
+            <sql>
+                DELETE FROM ORDER_AUDIT_LOG WHERE audit_id = 1;
+            </sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="003-alter-customer-orders-status" author="dev">
+        <modifyDataType tableName="CUSTOMER_ORDERS" columnName="status" newDataType="VARCHAR2(50)"/>
+        <rollback>
+            <modifyDataType tableName="CUSTOMER_ORDERS" columnName="status" newDataType="VARCHAR2(30)"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="004-update-order-proc" author="dev">
+        <sqlFile path="changes/update-pkg-order-process-set1.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="rollback/revert-pkg-order-process-original.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

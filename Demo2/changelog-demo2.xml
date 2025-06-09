@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+  <!-- 001: Update the package logic -->
+  <changeSet id="001-update-package-v2" author="dev">
+    <sqlFile 
+      path="changes/update-pkg-order-process-v2.sql" 
+      splitStatements="false"
+      endDelimiter="/"
+      relativeToChangelogFile="true"/>
+    <rollback>
+      <sqlFile path="../demo1/changes/update-pkg-order-process.sql" relativeToChangelogFile="true"/>
+    </rollback>
+  </changeSet>
+
+  <!-- 002: Drop non-PK column from CUSTOMER_ORDERS -->
+  <changeSet id="002-drop-status-column" author="BenR">
+    <dropColumn tableName="CUSTOMER_ORDERS" columnName="status"/>
+    <rollback>
+      <addColumn tableName="CUSTOMER_ORDERS">
+        <column name="status" type="VARCHAR2(50)"/>
+      </addColumn>
+    </rollback>
+  </changeSet>
+
+</databaseChangeLog>

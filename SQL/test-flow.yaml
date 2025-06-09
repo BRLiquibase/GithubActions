@@ -1,0 +1,23 @@
+stages:
+
+  # === Dev Environment Stage ===
+  Dev:
+    actions:
+      - type: liquibase
+        command: update
+        globalArgs: { defaults-file: "liquibase-dev.properties" }
+
+
+  # === Test Environment Stage ===
+  Test:
+    actions:
+      - type: liquibase
+        command: update
+        globalArgs: { defaults-file: "liquibase-qa.properties" }
+
+endStage:
+  actions:
+    - type: liquibase
+      command: history
+      runWith:
+        defaultsFile: liquibase-dev.properties

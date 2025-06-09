@@ -1,0 +1,6 @@
+liquibase rollback-one-changeset \
+  --changelog-file=changelog-demo1.xml \
+  --changeset-id=003-create-customer-orders \
+  --changeset-author=MikeO \
+  --changeset-path=changelog-demo1.xml \
+  --force
