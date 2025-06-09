@@ -6,6 +6,7 @@ on:
 
 jobs:
   liquibase-job:
+    if: github.actor != 'github-actions[bot]'
     runs-on: self-hosted
 
     env:
@@ -16,11 +17,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-
-    # - name: Run demo setup (Postgres + Vault)
-    #   run: |
-    #     chmod +x ./runme.sh
-    #     ./runme.sh
 
     - name: Run Liquibase flow
       run: |
