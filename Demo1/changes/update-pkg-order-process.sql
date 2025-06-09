@@ -1,0 +1,13 @@
+CREATE OR REPLACE PACKAGE PKG_ORDER_PROCESS1 AS
+  PROCEDURE create_order(p_order_id IN NUMBER);
+END PKG_ORDER_PROCESS;
+/
+
+CREATE OR REPLACE PACKAGE BODY PKG_ORDER_PROCESS1 AS
+  PROCEDURE create_order(p_order_id IN NUMBER) IS
+  BEGIN
+    -- Your logic here
+    DBMS_OUTPUT.PUT_LINE('Creating order with ID: ' || p_order_id);
+  END create_order;
+END PKG_ORDER_PROCESS;
+/
