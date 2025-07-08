@@ -31,3 +31,5 @@ CREATE TABLE downloads (
   file_name VARCHAR(255),
   FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
+
+DROP TABLE IF EXISTS downloads;

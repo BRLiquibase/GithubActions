@@ -1,1 +1,7 @@
 .env
+actions-runner/_work/
+# Ignore GitHub Actions runner temp/state files
+*_2fffabed-*.json
+cad7976c-*
+.gitconfig
+actions-runner/**/_work/**
