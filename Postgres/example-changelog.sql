@@ -16,7 +16,7 @@ CREATE TABLE "dev_notes" (
 ALTER TABLE "customers" ADD "loyalty_points" INTEGER DEFAULT 0;
 --rollback ALTER TABLE "customers" DROP COLUMN "loyalty_points";
 
---changeset james:3 labels:release-1.0.0 context:dev
+--changeset james:3 labels:release-1.0.0 
 -- Adds a foreign key constraint to link 'dev_notes.customer_id' with 'customers.customer_id'.
 ALTER TABLE "dev_notes" ADD CONSTRAINT "dev_notes_customer_id_fkey"
 FOREIGN KEY ("customer_id") REFERENCES "customers" ("customer_id") ON UPDATE NO ACTION ON DELETE NO ACTION;
