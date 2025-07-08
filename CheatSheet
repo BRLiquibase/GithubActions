@@ -1,0 +1,106 @@
+## Liquibase verifys connection
+liquibase status
+
+## Liquibase validates changelog and environment
+liquibase validate
+
+## Liquibase creates a snapshot of the current database
+liquibase --output-file=schema-snap.json snapshot --snapshot-format=json
+
+## Liquibase diffs environments with objects specified 
+liquibase diff --diff-types=tables,indexes,views
+
+## Liquibase generate change from difference
+liquibase diff-changelog --changelog-file=example-changelog2.xml
+
+## Liquibase shows the SQL that would apply the generated changelog
+liquibase update-sql --changelog-file=example-changelog2.xml  --output-file=example-changelog2.sql
+
+## Liquibase applies the changes from the changelog to the database
+liquibase update --changelog-file=example-changelog2.xml
+
+## Liquibase tags the current state for future rollback
+liquibase tag v1.0-after-update
+
+## Liquibase rolls back the most recent changeSet
+liquibase rollbackCount 1 --changelog-file=example-changelog.sql
+
+## Liquibase rolls back to a specific tag (must have been tagged earlier)
+liquibase rollback v1.0-after-update --changelog-file=example-changelog1.xml
+
+## Rollback to a previously tagged state
+liquibase rollback v1.0-after-update --changelog-file=example-changelog.xml
+
+## Liquibase shows SQL to roll back a specific changeset (must include <rollback>)
+liquibase rollback-one-changeset-sql \
+  --changeSetId=12345 \
+  --changeSetAuthor=benriley \
+  --changeSetPath=example-changelog.xml
+
+
+## Roll back a specific changeset by ID and author
+liquibase rollbackOneChangeSet \
+  --changeSetId=12345 \
+  --changeSetAuthor=benriley \
+  --changeSetPath=example-changelog1.xml
+
+## liquibase xml labels and context
+labels: descriptive tags (e.g. release, dev-only)
+context: environment-specific control (e.g. prod, dev)
+
+<changeSet id="001" author="benriley" labels="dev,test" context="dev">
+    <addColumn tableName="user">
+        <column name="debug_mode" type="BOOLEAN" defaultValueBoolean="false"/>
+    </addColumn>
+</changeSet>
+
+liquibase update --label-filter=dev
+liquibase update --contexts=dev
+
+## Liquibase Use runAlways and runOnChange wisely
+<changeSet id="002" author="benriley" runAlways="true">
+    <update tableName="config">
+        <column name="last_modified" valueDate="NOW()"/>
+        <where>id=1</where>
+    </update>
+</changeSet>
+
+runAlways="true": runs every time Liquibase executes (good for reference data).
+runOnChange="true": runs again only if the content of the changeset changes.
+
+## Liquibase Pre-conditions
+Use preConditions to protect environments
+
+<changeSet id="003" author="benriley">
+    <preConditions onFail="HALT">
+        <not>
+            <columnExists tableName="customer" columnName="email"/>
+        </not>
+    </preConditions>
+
+    <addColumn tableName="customer">
+        <column name="email" type="VARCHAR(255)"/>
+    </addColumn>
+</changeSet>
+
+🧠 Why:
+Prevents double-adding columns or applying changes in the wrong context.
+
+## Examples:
+01
+liquibase update --changelog-file=changelogs/01-add-column.xml
+
+02
+liquibase rollback-one-changeset-sql \
+  --changeSetId=02 \
+  --changeSetAuthor=benriley \
+  --changeSetPath=changelogs/02-drop-column-with-rollback.xml
+
+03
+liquibase update --changelog-file=changelogs/03-conditional-dev-column.xml --contexts=dev
+
+04
+liquibase update --changelog-file=changelogs/04-runAlways-flag.xml
+
+05
+liquibase update --changelog-file=changelogs/05-label-release.xml --label-filter=release

@@ -1,0 +1,8 @@
+<changeSet id="02" author="benriley">
+    <dropColumn tableName="users" columnName="temp_data"/>
+    <rollback>
+        <addColumn tableName="users">
+            <column name="temp_data" type="VARCHAR(255)"/>
+        </addColumn>
+    </rollback>
+</changeSet>

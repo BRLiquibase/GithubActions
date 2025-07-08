@@ -47,3 +47,31 @@ INSERT INTO rental_history (customer_id, rental_date, return_date, rental_amount
 (1, '2024-01-10', '2024-01-12', 9.99),
 (2, '2024-02-15', '2024-02-18', 14.50),
 (3, '2024-03-01', '2024-03-03', 7.75);
+
+
+CREATE TABLE IF NOT EXISTS logs (
+    customer_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone_number VARCHAR(20),
+    qa_flagged BOOLEAN DEFAULT false
+);
+
+CREATE TABLE IF NOT EXISTS chat (
+    customer_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone_number VARCHAR(20),
+    qa_flagged BOOLEAN DEFAULT false
+);
+
+CREATE TABLE IF NOT EXISTS files (
+    customer_id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone_number VARCHAR(20),
+    qa_flagged BOOLEAN DEFAULT false
+);

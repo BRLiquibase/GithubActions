@@ -1,0 +1,6 @@
+<changeSet id="04" author="benriley" runAlways="true">
+    <update tableName="settings">
+        <column name="last_checked" valueDate="NOW()"/>
+        <where>id = 1</where>
+    </update>
+</changeSet>

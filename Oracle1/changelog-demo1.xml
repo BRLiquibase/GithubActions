@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <!-- 001: Create ORDER_AUDIT_LOG -->
+    <changeSet id="001-create-order-audit-log" author="BenR" labels="create-order-audit-log">
+        <createTable tableName="ORDER_AUDIT_LOG">
+            <column name="audit_id" type="NUMBER(10)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="order_id" type="NUMBER(10)"/>
+            <column name="action" type="VARCHAR2(50)"/>
+            <column name="created_at" type="TIMESTAMP"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="ORDER_AUDIT_LOG"/>
+        </rollback>
+    </changeSet>
+
+    <!-- 002: Insert into ORDER_AUDIT_LOG -->
+    <changeSet id="002-insert-sample-record" author="DavidD" labels="insert-sample-record">
+        <sql>
+            INSERT INTO ORDER_AUDIT_LOG (audit_id, order_id, action, created_at)
+            VALUES (1, 101, 'ORDER_CREATED', SYSTIMESTAMP),
+                   (2, 102, 'ORDER_UPDATED', SYSTIMESTAMP), 
+                   (3, 103, 'ORDER_DELETED', SYSTIMESTAMP),
+                   (4, 104, 'ORDER_SHIPPED', SYSTIMESTAMP),
+                   (5, 105, 'ORDER_DELIVERED', SYSTIMESTAMP);
+        </sql>
+        <rollback>
+            DELETE FROM ORDER_AUDIT_LOG WHERE audit_id = 1;
+        </rollback>
+    </changeSet>
+
+    <!-- 003: Create CUSTOMER_ORDERS with status VARCHAR2(30) -->
+    <changeSet id="003-create-customer-orders" author="MikeO" labels="create-customer-orders">
+        <createTable tableName="CUSTOMER_ORDERS">
+            <column name="order_id" type="NUMBER(10)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="customer_id" type="NUMBER(10)"/>
+            <column name="status" type="VARCHAR2(30)"/>
+        </createTable>
+        <!-- <dropTable tableName="CUSTOMER_ORDERS"/> -->
+        <rollback>
+            <dropTable tableName="CUSTOMER_ORDERS"/>
+        </rollback>
+    </changeSet>
+
+    <!-- 004: Modify status column to VARCHAR2(50) -->
+    <changeSet id="004-modify-status-column" author="dev" labels="modify-status-column">
+        <modifyDataType tableName="CUSTOMER_ORDERS" columnName="status" newDataType="VARCHAR2(50)"/>
+        <rollback>
+            <modifyDataType tableName="CUSTOMER_ORDERS" columnName="status" newDataType="VARCHAR2(30)"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

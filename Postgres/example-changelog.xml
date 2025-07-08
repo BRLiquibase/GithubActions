@@ -1,0 +1,46 @@
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+       http://www.liquibase.org/xml/ns/dbchangelog
+       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <!-- ChangeSet 1: Create table -->
+    <changeSet id="1-create-test-orders" author="BenR">
+        <createTable tableName="TEST_ORDERS">
+            <column name="ORDER_ID" type="NUMBER">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="CUSTOMER_NAME" type="VARCHAR2(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ORDER_DATE" type="DATE"/>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet 2: Drop table -->
+    <changeSet id="2-drop-test-orders" author="BenR">
+        <dropTable tableName="TEST_ORDERS"/>
+    </changeSet>
+
+    <changeSet author="benriley (generated)" id="1750766522265-1">
+        <createTable tableName="dev_notes">
+            <column autoIncrement="true" name="note_id" startWith="3" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="dev_notes_pkey"/>
+            </column>
+            <column name="customer_id" type="INTEGER"/>
+            <column name="note" type="TEXT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="benriley (generated)" id="1750766522265-2">
+        <addColumn tableName="customers">
+            <column defaultValueNumeric="0" name="loyalty_points" type="INTEGER"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="benriley (generated)" id="1750766522265-3">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="dev_notes" constraintName="dev_notes_customer_id_fkey" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="customer_id" referencedTableName="customers" validate="true"/>
+    </changeSet>
+    <changeSet author="benriley (generated)" id="1750766522265-4">
+        <dropColumn columnName="qa_flagged" tableName="customers"/>
+    </changeSet>
+</databaseChangeLog>

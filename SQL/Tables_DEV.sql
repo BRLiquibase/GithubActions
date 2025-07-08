@@ -4,8 +4,7 @@ CREATE TABLE IF NOT EXISTS customers (
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     email VARCHAR(100),
-    phone_number VARCHAR(20),
-    loyalty_points INT DEFAULT 0
+    phone_number VARCHAR(20)
 );
 
 -- Create addresses table
@@ -30,14 +29,6 @@ CREATE TABLE IF NOT EXISTS rental_history (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
--- Create dev_notes table (DEV only)
-CREATE TABLE IF NOT EXISTS dev_notes (
-    note_id SERIAL PRIMARY KEY,
-    customer_id INT,
-    note TEXT,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
-);
-
 -- Insert into customers
 INSERT INTO customers (first_name, last_name, email, phone_number, loyalty_points) VALUES
 ('Alice', 'Johnson', 'alice.j@example.com', '555-1234', 100),
@@ -55,8 +46,3 @@ INSERT INTO rental_history (customer_id, rental_date, return_date, rental_amount
 (1, '2024-01-10', '2024-01-12', 9.99),
 (2, '2024-02-15', '2024-02-18', 14.50),
 (3, '2024-03-01', '2024-03-03', 7.75);
-
--- Insert into dev_notes
-INSERT INTO dev_notes (customer_id, note) VALUES
-(1, 'Customer asked about points program.'),
-(2, 'Flagged for frequent rentals.');

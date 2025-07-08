@@ -1,0 +1,5 @@
+<changeSet id="05" author="benriley" labels="release">
+    <addColumn tableName="users">
+        <column name="account_status" type="VARCHAR(20)" defaultValue="active"/>
+    </addColumn>
+</changeSet>
