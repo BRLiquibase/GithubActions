@@ -11,7 +11,7 @@ CREATE TABLE "dev_notes" (
 );
 --rollback DROP TABLE "dev_notes";
 
---changeset David:2 labels:release-1.0.0 context:dev
+--changeset David:2 labels:release-1.0.0
 -- Adds 'loyalty_points' column to the 'customers' table to track customer reward points.
 ALTER TABLE "customers" ADD "loyalty_points" INTEGER DEFAULT 0;
 --rollback ALTER TABLE "customers" DROP COLUMN "loyalty_points";
@@ -32,4 +32,36 @@ CREATE TABLE downloads (
   FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
-DROP TABLE IF EXISTS downloads;
+--changeset alex:5 labels:release-1.0.1
+-- Adds an index on 'customers.email' to improve lookup performance.
+CREATE INDEX idx_customers_email ON customers(email);
+--rollback DROP INDEX idx_customers_email;
+
+--changeset shalu:6 labels:release-1.0.1
+-- Adds a 'status' column to 'downloads' table to track download success/failure.
+ALTER TABLE downloads ADD COLUMN status VARCHAR(20) DEFAULT 'SUCCESS';
+--rollback ALTER TABLE downloads DROP COLUMN status;
+
+--changeset neeraj:7 labels:release-1.0.1 context:prod
+-- Creates a table to log customer support interactions.
+CREATE TABLE support_logs (
+  log_id SERIAL PRIMARY KEY,
+  customer_id INT NOT NULL,
+  agent_name VARCHAR(100),
+  message TEXT,
+  logged_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+--rollback DROP TABLE support_logs;
+
+--changeset khushbu:8 labels:release-1.0.1
+-- Modifies 'customers' table to add a 'preferred_language' column.
+ALTER TABLE customers ADD COLUMN preferred_language VARCHAR(10) DEFAULT 'en';
+--rollback ALTER TABLE customers DROP COLUMN preferred_language;
+
+--changeset srija:9 labels:release-1.0.1 context:test
+-- Adds a test-only column to 'dev_notes' for tagging or grouping notes during QA.
+ALTER TABLE dev_notes ADD COLUMN test_tag VARCHAR(50);
+--rollback ALTER TABLE dev_notes DROP COLUMN test_tag;
+
+drop table downloads;

@@ -14,7 +14,6 @@ function success() {
   echo -e "${GREEN}✅ $1${NC}"
 }
 
-
 echo "*** Cleaning up old containers..."
 docker rm -f postgres-dev postgres-qa postgres-prod vault-server || true
 success "Old containers cleaned up."
@@ -37,19 +36,18 @@ docker run --name vault-server -p 8200:8200 \
   -d hashicorp/vault:1.14.4 server -dev -dev-root-token-id=vault-plaintext-root-token
 success "Vault server started."
 
-echo "*** Waiting for services to be ready..."
-sleep 10
-success "Services are ready."
+echo "*** Waiting for Vault to be ready..."
+until curl -s http://localhost:8200/v1/sys/health >/dev/null; do
+  sleep 1
+done
+success "Vault is ready."
 
 echo "*** Writing secrets to Vault..."
-docker exec -i vault-server sh <<EOF
-export VAULT_ADDR=http://localhost:8200
-export VAULT_TOKEN=vault-plaintext-root-token
+export VAULT_ADDR='http://localhost:8200'
+export VAULT_TOKEN='vault-plaintext-root-token'
 
 vault kv put secret/liquibase/credentials username=postgres password=secret
-
 vault kv put secret/liquibase/license pro_key="${LIQUIBASE_PRO_LICENSE}"
-EOF
 success "Secrets written to Vault."
 
 echo "*** Copying SQL files into containers..."

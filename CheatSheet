@@ -33,9 +33,9 @@ liquibase rollback v1.0-after-update --changelog-file=example-changelog.xml
 
 ## Liquibase shows SQL to roll back a specific changeset (must include <rollback>)
 liquibase rollback-one-changeset-sql \
-  --changeSetId=12345 \
+  --changeSetId=NameHerE \
   --changeSetAuthor=benriley \
-  --changeSetPath=example-changelog.xml
+  --changeSetPath=example-changelog.sql
 
 
 ## Roll back a specific changeset by ID and author
