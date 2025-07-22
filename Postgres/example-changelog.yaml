@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1CreateSchemaAnalytics
+      author: BenR
+      changes:
+        - sql:
+            splitStatements: false
+            stripComments: true
+            sql: |
+              CREATE SCHEMA IF NOT EXISTS analytics;
