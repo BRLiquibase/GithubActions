@@ -12,7 +12,7 @@
             <column name="user_id" type="SERIAL">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="first_name" type="VARCHAR(50)" />
+            <column name="middle_name" type="VARCHAR(50)" />
             <column name="last_name" type="VARCHAR(50)" />
             <column name="email" type="VARCHAR(100)">
                 <constraints unique="true" nullable="false"/>
