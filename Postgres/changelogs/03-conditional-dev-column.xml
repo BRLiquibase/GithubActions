@@ -1,5 +1,0 @@
-<changeSet id="03" author="benriley" context="dev">
-    <addColumn tableName="users">
-        <column name="debug_mode" type="BOOLEAN" defaultValueBoolean="false"/>
-    </addColumn>
-</changeSet>

@@ -1,0 +1,15 @@
+jobs:
+  update-env:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        env: [dev1, dev2, qa1, uat1, prod1, ...]
+    steps:
+      - name: Run Liquibase
+        run: |
+          liquibase \
+            --url=${{ secrets['DB_URL_' + matrix.env] }} \
+            --username=${{ secrets['DB_USER_' + matrix.env] }} \
+            --password=${{ secrets['DB_PASS_' + matrix.env] }} \
+            --changelog-file=changelog.xml \
+            update

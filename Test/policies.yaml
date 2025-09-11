@@ -1,0 +1,21 @@
+
+- id: unique_user_ids
+  title: Users must have unique IDs
+  severity: high
+  description: Ensures there are no duplicate user IDs in the data set.
+  condition: "len(ctx['users']) == len(set(u['id'] for u in ctx['users']))"
+  details: "sorted([u['id'] for u in ctx['users']])"
+
+- id: age_range
+  title: Users must be adults (18+)
+  severity: medium
+  description: All users must be 18 or older.
+  condition: "all(u['age'] >= 18 for u in ctx['users'])"
+  details: "[{u['name']: u['age']} for u in ctx['users']]"
+
+- id: active_users_present
+  title: At least one active user exists
+  severity: low
+  description: There should be at least one active user.
+  condition: "any(u.get('active', False) for u in ctx['users'])"
+  details: "[u['name'] for u in ctx['users'] if u.get('active')]"

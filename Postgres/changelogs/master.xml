@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.17.xsd">
+
+  <!-- SQL files are in the SAME folder as this master.xml -->
+  <include file="001.xml"              relativeToChangelogFile="true"/>
+  <include file="002.xml"              relativeToChangelogFile="true"/>
+  <!-- Tip: omit bank_demo_all.sql here to avoid double-applying the same changesets -->
+</databaseChangeLog>

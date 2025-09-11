@@ -1,5 +1,0 @@
-<changeSet id="01" author="benriley">
-    <addColumn tableName="users">
-        <column name="signup_date" type="DATE"/>
-    </addColumn>
-</changeSet>

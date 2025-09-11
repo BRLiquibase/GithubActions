@@ -1,0 +1,46 @@
+{
+  "title": "Checks run",
+  "generated_at": "2025-08-28 09:48:41Z",
+  "counts": {
+    "total": 3,
+    "pass": 0,
+    "fail": 0,
+    "error": 3
+  },
+  "context_info": "context.json (keys: users)",
+  "checks": [
+    {
+      "id": "unique_user_ids",
+      "title": "Users must have unique IDs",
+      "description": "Ensures there are no duplicate user IDs in the data set.",
+      "severity": "high",
+      "condition": "len(ctx['users']) == len(set(u['id'] for u in ctx['users']))",
+      "eval": null,
+      "status": "ERROR",
+      "error": "Disallowed expression element: comprehension",
+      "details": null
+    },
+    {
+      "id": "age_range",
+      "title": "Users must be adults (18+)",
+      "description": "All users must be 18 or older.",
+      "severity": "medium",
+      "condition": "all(u['age'] >= 18 for u in ctx['users'])",
+      "eval": null,
+      "status": "ERROR",
+      "error": "Disallowed expression element: comprehension",
+      "details": null
+    },
+    {
+      "id": "active_users_present",
+      "title": "At least one active user exists",
+      "description": "There should be at least one active user.",
+      "severity": "low",
+      "condition": "any(u.get('active', False) for u in ctx['users'])",
+      "eval": null,
+      "status": "ERROR",
+      "error": "Attribute calls are not allowed; use allowed helpers or inline expressions.",
+      "details": null
+    }
+  ]
+}

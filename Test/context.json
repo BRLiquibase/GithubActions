@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ada",
+      "age": 31,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Linus",
+      "age": 25,
+      "active": false
+    },
+    {
+      "id": 3,
+      "name": "Grace",
+      "age": 17,
+      "active": false
+    }
+  ]
+}
